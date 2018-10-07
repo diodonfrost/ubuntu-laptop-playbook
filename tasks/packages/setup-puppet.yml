@@ -11,7 +11,7 @@
 
     - name: add Puppetlabs repository on Debian
       apt_repository:
-        repo: "deb http://apt.puppetlabs.com ansible_distribution_release puppet{{ puppet_version }}"
+        repo: "deb http://apt.puppetlabs.com/{{ ansible_distribution_release }} puppet{{ puppet_version }}"
         state: present
 
   when: ansible_os_family == "Debian"

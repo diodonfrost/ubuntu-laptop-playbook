@@ -11,7 +11,7 @@
 
     - name: add Docker repository on Debian
       apt_repository:
-        repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower}}
+        repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
         state: present
 
   when: ansible_os_family == "Debian"
@@ -23,7 +23,7 @@
       yum_repository:
         name: docker-ce-stable
         description: Docker CE Stable - $basearch
-        baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+        baseurl: https://download.docker.com/linux/centos/$releasever/$basearch/stable
         gpgcheck: true
         gpgkey: https://download.docker.com/linux/centos/gpg
 
@@ -31,7 +31,7 @@
 
 - name: Install docker
   package:
-    name: docker
+    name: docker-ce
     ensure: present
 
 - name: Service docker
