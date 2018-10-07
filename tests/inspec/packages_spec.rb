@@ -8,3 +8,48 @@ control 'install-01' do
     it { should be_installed }
   end
 end
+
+control 'install-02' do
+  impact 1.0
+  title 'Discord install'
+  desc 'Discord should be installed'
+  describe package('discord') do
+    it { should be_installed }
+  end
+end
+
+control 'install-03' do
+  impact 1.0
+  title 'Docker install'
+  desc 'Docker should be installed'
+  describe package('docker') do
+    it { should be_installed }
+  end
+end
+
+control 'install-04' do
+  impact 1.0
+  title 'Puppet install'
+  desc 'Puppet-agent should be installed'
+  describe package('puppet-agent') do
+    it { should be_installed }
+  end
+end
+
+control 'install-05' do
+  impact 1.0
+  title 'Vagrant install'
+  desc 'Vagrant should be installed'
+  describe package('vagrant') do
+    it { should be_installed }
+  end
+end
+
+control 'install-06' do
+  impact 1.0
+  title 'Virtualbox install'
+  desc 'Virtualbox should be installed'
+  describe package('virtualbox') do
+    it { should be_installed }
+  end
+end
