@@ -1,0 +1,19 @@
+---
+# Install text editor atom
+
+- name: Install packages requirement
+  package:
+    name: "{{ item }}"
+  with_items: "{{ atom_packages_requirement }}"
+
+- name: Install text editor atom on Debian family system
+  apt:
+    deb: https://github.com/atom/atom/releases/download/v1.31.2/atom-amd64.deb
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install text editor atom on RedHat family system
+  yum:
+    name: https://github.com/atom/atom/releases/download/v1.31.2/atom.x86_64.rpm
+    state: present
+  when: ansible_os_family == "RedHat"

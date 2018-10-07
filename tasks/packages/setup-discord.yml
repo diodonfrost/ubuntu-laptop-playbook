@@ -1,0 +1,14 @@
+---
+# Install voice and text chat Discord.
+
+- name: Install packages requirement for discord
+  package:
+    name: "{{ item }}"
+  with_items: "{{ discord_packages_requirement }}"
+  when: ansible_os_family == "Debian"
+
+- name: Install Discord on Debian family system
+  apt:
+    deb: https://dl.discordapp.net/apps/linux/0.0.5/discord-0.0.5.deb
+    state: present
+  when: ansible_os_family == "Debian"

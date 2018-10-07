@@ -1,0 +1,36 @@
+---
+# Install selected packages
+
+- name: Install os packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ os_packages }}"
+
+- name: Install text editor Atom
+  import_tasks: setup-atom.yml
+  when: atom_install == true
+
+- name: Install voice and text chat Discord
+  import_tasks: setup-discord.yml
+  when: discord_install == true
+
+- name: Install Docker
+  import_tasks: setup-docker.yml
+  when: docker_install == true
+
+- name: Install OhMyZsh
+  import_tasks: setup-ohmyzsh.yml
+  when: ohmyzsh_install == true
+
+- name: Install Puppet
+  import_tasks: setup-puppet.yml
+  when: puppet_install == true
+
+- name: Install Vagrant
+  import_tasks: setup-vagrant.yml
+  when: vagrant_install == true
+
+- name: Install Virtualbox
+  import_tasks: setup-virtualbox.yml
+  when: virtualbox_install == true

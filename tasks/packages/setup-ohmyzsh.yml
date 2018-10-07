@@ -1,0 +1,12 @@
+---
+# Install shell OhMyZsh
+
+- name: Cloning oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh
+    dest: ~/.oh-my-zsh
+
+- name: Creating new ~/.zshrc
+  copy:
+    src: ~/.oh-my-zsh/templates/zshrc.zsh-template
+    dest: ~/.zshrc

@@ -1,0 +1,19 @@
+os_packages:
+  - vim
+  - git
+  - nmap
+  - filezilla
+  - openvpn
+  - keepassx
+  - openssh-server
+  - python
+  - python-devel
+
+atom_packages_requirement:
+  - gconf2
+  - python
+  - python-dev
+
+discord_packages_requirement:
+  - libappindicator1
+  - libc++1

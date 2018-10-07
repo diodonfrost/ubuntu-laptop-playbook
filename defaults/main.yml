@@ -1,2 +1,33 @@
 ---
 # defaults file for linux-dev-playbook
+
+# Install configuration management tool Puppet.
+# Default is true.
+puppet_install: true
+
+# Specify puppet-agent version
+puppet_version: "5"
+
+# Install text editor Atom.
+# Default is true.
+atom_install: true
+
+# Install voice and text chat Discord.
+# Default is true.
+discord_install: true
+
+# Install Docker.
+# Default is true.
+docker_install: true
+
+# Install VirtualBox.
+# Default is true.
+virtualbox_install: true
+
+# Install provisionner Vagrant.
+# Default is true.
+vagrant_install: true
+
+# Install shell Oh-My-Zsh.
+# Default is true.
+ohmyzsh_install: true
