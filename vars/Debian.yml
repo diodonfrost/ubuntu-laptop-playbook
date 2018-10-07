@@ -7,7 +7,7 @@ os_packages:
   - keepassx
   - openssh-server
   - python
-  - python-devel
+  - python-dev
 
 atom_packages_requirement:
   - gconf2
