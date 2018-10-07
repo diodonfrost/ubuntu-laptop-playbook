@@ -1,2 +1,8 @@
 ---
 # tasks file for linux-dev-playbook
+
+- name: Include OS specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Ensure selected packages are present
+  include_tasks: "packages/install.yml"

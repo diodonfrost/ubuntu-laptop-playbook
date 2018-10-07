@@ -1,0 +1,41 @@
+---
+# Install Docker repos
+
+- name: "(Install: Debian/Ubuntu) Install Docker official repos"
+  block:
+
+    - name: Add an Docker signing key on Debian
+      apt_key:
+        url: https://download.docker.com/linux/{{ ansible_distribution | lower}}/gpg
+        state: present
+
+    - name: add Docker repository on Debian
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower}}
+        state: present
+
+  when: ansible_os_family == "Debian"
+
+- name: "(Install: Red) Install Docker  official repos"
+  block:
+
+    - name: Add Docker repository for CentOS
+      yum_repository:
+        name: docker-ce-stable
+        description: Docker CE Stable - $basearch
+        baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+        gpgcheck: true
+        gpgkey: https://download.docker.com/linux/centos/gpg
+
+  when: ansible_os_family == "RedHat"
+
+- name: Install docker
+  package:
+    name: docker
+    ensure: present
+
+- name: Service docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
