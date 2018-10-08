@@ -4,30 +4,15 @@
 - name: "(Install: Debian/Ubuntu) Install Puppetlabs official repos"
   block:
 
-    - name: Add an Puppetlabs signing key on Debian
-      apt_key:
-        url: http://apt.puppetlabs.com/DEB-GPG-KEY-puppetlabs
-        state: present
+- name: Add an Puppetlabs signing key on Debian
+  apt_key:
+    url: http://apt.puppetlabs.com/DEB-GPG-KEY-puppetlabs
+    state: present
 
-    - name: add Puppetlabs repository on Debian
-      apt_repository:
-        repo: "deb http://apt.puppetlabs.com/{{ ansible_distribution_release }} puppet{{ puppet_version }}"
-        state: present
-
-  when: ansible_os_family == "Debian"
-
-- name: "(Install: Red) Install Puppetlabs  official repos"
-  block:
-
-    - name: Add Puppetlabs repository for CentOS
-      yum_repository:
-        name: Puppetlabs
-        description: Puppetlabs repository
-        baseurl: "https//yum.puppetlabs.com/puppet{{ puppet_version }}-nightly/$releasever/$basearch/SRPMS"
-        gpgcheck: true
-        gpgkey: https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs
-
-  when: ansible_os_family == "RedHat"
+- name: add Puppetlabs repository on Debian
+  apt_repository:
+    repo: "deb http://apt.puppetlabs.com/{{ ansible_distribution_release }} puppet{{ puppet_version }}"
+    state: present
 
 - name: Install puppet-agent
   package:

@@ -1,33 +1,15 @@
 ---
 # Install Virtualbox repos
 
-- name: "(Install: Debian/Ubuntu) Install Virtualbox with official oracle repos"
-  block:
+- name: Add an virtualbox signing key on Debian
+  apt_key:
+    url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+    state: present
 
-    - name: Add an virtualbox signing key on Debian
-      apt_key:
-        url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
-        state: present
-
-    - name: add virtualbox repository on Debian
-      apt_repository:
-        repo: deb https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib
-        state: present
-
-  when: ansible_os_family == "Debian"
-
-- name: "(Install: Red) Install Virtualbox with official oracle repos"
-  block:
-
-    - name: Add Virtualbox repository for CentOS
-      yum_repository:
-        name: Virtualbox
-        description: Virtualbox repository
-        baseurl: http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch
-        gpgcheck: true
-        gpgkey: https://www.virtualbox.org/download/oracle_vbox.asc
-
-  when: ansible_os_family == "RedHat"
+- name: add virtualbox repository on Debian
+  apt_repository:
+    repo: deb https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib
+    state: present
 
 - name: Install virtualbox
   package:
