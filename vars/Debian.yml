@@ -17,3 +17,9 @@ atom_packages_requirement:
 discord_packages_requirement:
   - libappindicator1
   - libc++1
+
+docker_packages_requirement:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common

@@ -5,10 +5,3 @@
   apt:
     deb: https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb
     state: present
-  when: ansible_os_family == "Debian"
-
-- name: Install Vagrant on RedHat family system
-  yum:
-    name: https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.rpm
-    state: present
-  when: ansible_os_family == "RedHat"

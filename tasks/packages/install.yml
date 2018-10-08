@@ -19,10 +19,6 @@
   import_tasks: setup-docker.yml
   when: docker_install == true
 
-- name: Install OhMyZsh
-  import_tasks: setup-ohmyzsh.yml
-  when: ohmyzsh_install == true
-
 - name: Install Puppet
   import_tasks: setup-puppet.yml
   when: puppet_install == true

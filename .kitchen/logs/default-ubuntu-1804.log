@@ -1,57 +1,49 @@
-I, [2018-10-08T01:00:59.123659 #14512]  INFO -- default-ubuntu-1804: -----> Converging <default-ubuntu-1804>...
-I, [2018-10-08T01:00:59.126596 #14512]  INFO -- default-ubuntu-1804: Preparing files for transfer
-I, [2018-10-08T01:00:59.126596 #14512]  INFO -- default-ubuntu-1804: Preparing playbook
-I, [2018-10-08T01:00:59.129513 #14512]  INFO -- default-ubuntu-1804: Preparing inventory
-I, [2018-10-08T01:00:59.130493 #14512]  INFO -- default-ubuntu-1804: Preparing modules
-I, [2018-10-08T01:00:59.132438 #14512]  INFO -- default-ubuntu-1804: nothing to do for modules
-I, [2018-10-08T01:00:59.132438 #14512]  INFO -- default-ubuntu-1804: Preparing roles
-I, [2018-10-08T01:00:59.711618 #14512]  INFO -- default-ubuntu-1804: Preparing ansible.cfg file
-I, [2018-10-08T01:00:59.712594 #14512]  INFO -- default-ubuntu-1804: Empty ansible.cfg generated
-I, [2018-10-08T01:00:59.714544 #14512]  INFO -- default-ubuntu-1804: Preparing group_vars
-I, [2018-10-08T01:00:59.715520 #14512]  INFO -- default-ubuntu-1804: nothing to do for group_vars
-I, [2018-10-08T01:00:59.715520 #14512]  INFO -- default-ubuntu-1804: Preparing additional_copy_path
-I, [2018-10-08T01:00:59.720395 #14512]  INFO -- default-ubuntu-1804: Preparing host_vars
-I, [2018-10-08T01:00:59.723321 #14512]  INFO -- default-ubuntu-1804: nothing to do for host_vars
-I, [2018-10-08T01:00:59.724297 #14512]  INFO -- default-ubuntu-1804: Preparing hosts file
-I, [2018-10-08T01:00:59.729182 #14512]  INFO -- default-ubuntu-1804: Preparing spec
-I, [2018-10-08T01:00:59.730149 #14512]  INFO -- default-ubuntu-1804: nothing to do for spec
-I, [2018-10-08T01:00:59.731125 #14512]  INFO -- default-ubuntu-1804: Preparing library plugins
-I, [2018-10-08T01:00:59.732100 #14512]  INFO -- default-ubuntu-1804: nothing to do for library plugins
-I, [2018-10-08T01:00:59.733075 #14512]  INFO -- default-ubuntu-1804: Preparing callback plugins
-I, [2018-10-08T01:00:59.734050 #14512]  INFO -- default-ubuntu-1804: nothing to do for callback plugins
-I, [2018-10-08T01:00:59.734050 #14512]  INFO -- default-ubuntu-1804: Preparing filter_plugins
-I, [2018-10-08T01:00:59.735026 #14512]  INFO -- default-ubuntu-1804: nothing to do for filter_plugins
-I, [2018-10-08T01:00:59.736001 #14512]  INFO -- default-ubuntu-1804: Preparing lookup_plugins
-I, [2018-10-08T01:00:59.736977 #14512]  INFO -- default-ubuntu-1804: nothing to do for lookup_plugins
-I, [2018-10-08T01:00:59.736977 #14512]  INFO -- default-ubuntu-1804: Preparing ansible vault password
-I, [2018-10-08T01:00:59.737953 #14512]  INFO -- default-ubuntu-1804: Preparing additional_ssh_private_keys
-I, [2018-10-08T01:00:59.738927 #14512]  INFO -- default-ubuntu-1804: nothing to do for additional_ssh_private_keys
-I, [2018-10-08T01:00:59.738927 #14512]  INFO -- default-ubuntu-1804: Finished Preparing files for transfer
-I, [2018-10-08T01:00:59.742829 #14512]  INFO -- default-ubuntu-1804: Installing ansible, will try to determine platform os
-I, [2018-10-08T01:01:07.301754 #14512]  INFO -- default-ubuntu-1804: Transferring files to <default-ubuntu-1804>
-I, [2018-10-08T01:01:13.481735 #14512]  INFO -- default-ubuntu-1804: [1;35m [WARNING]: Found both group and host with same name: localhost[0m
-I, [2018-10-08T01:01:13.483686 #14512]  INFO -- default-ubuntu-1804: [1;35m[0m
-I, [2018-10-08T01:01:13.966984 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:13.967969 #14512]  INFO -- default-ubuntu-1804: PLAY [localhost] ***************************************************************
-I, [2018-10-08T01:01:13.990401 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:13.991377 #14512]  INFO -- default-ubuntu-1804: TASK [Gathering Facts] *********************************************************
-I, [2018-10-08T01:01:15.376419 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost][0m
-I, [2018-10-08T01:01:15.423224 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:15.424200 #14512]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Include OS specific variables.] *********************
-I, [2018-10-08T01:01:15.468127 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost][0m
-I, [2018-10-08T01:01:15.513969 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:15.514944 #14512]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Ensure selected packages are present] ***************
-I, [2018-10-08T01:01:15.665656 #14512]  INFO -- default-ubuntu-1804: [0;36mincluded: /tmp/kitchen/roles/linux-dev-playbook/tasks/packages/install.yml for localhost[0m
-I, [2018-10-08T01:01:15.721252 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:15.722233 #14512]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Install os packages] ********************************
-I, [2018-10-08T01:01:18.371408 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=vim)[0m
-I, [2018-10-08T01:01:20.604954 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=git)[0m
-I, [2018-10-08T01:01:22.814881 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=nmap)[0m
-I, [2018-10-08T01:01:25.024401 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=filezilla)[0m
-I, [2018-10-08T01:01:27.289882 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=openvpn)[0m
-I, [2018-10-08T01:01:29.624816 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=keepassx)[0m
-I, [2018-10-08T01:01:31.993291 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=openssh-server)[0m
-I, [2018-10-08T01:01:34.299374 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=python)[0m
-I, [2018-10-08T01:01:36.595482 #14512]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=python-dev)[0m
-I, [2018-10-08T01:01:36.650123 #14512]  INFO -- default-ubuntu-1804: 
-I, [2018-10-08T01:01:36.651098 #14512]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Install packages requirement for atom] **************
+I, [2018-10-08T20:52:25.222118 #6484]  INFO -- default-ubuntu-1804: -----> Converging <default-ubuntu-1804>...
+I, [2018-10-08T20:52:25.224067 #6484]  INFO -- default-ubuntu-1804: Preparing files for transfer
+I, [2018-10-08T20:52:25.225043 #6484]  INFO -- default-ubuntu-1804: Preparing playbook
+I, [2018-10-08T20:52:25.231870 #6484]  INFO -- default-ubuntu-1804: Preparing inventory
+I, [2018-10-08T20:52:25.232846 #6484]  INFO -- default-ubuntu-1804: Preparing modules
+I, [2018-10-08T20:52:25.233828 #6484]  INFO -- default-ubuntu-1804: nothing to do for modules
+I, [2018-10-08T20:52:25.234796 #6484]  INFO -- default-ubuntu-1804: Preparing roles
+I, [2018-10-08T20:52:26.286847 #6484]  INFO -- default-ubuntu-1804: Preparing ansible.cfg file
+I, [2018-10-08T20:52:26.287823 #6484]  INFO -- default-ubuntu-1804: Empty ansible.cfg generated
+I, [2018-10-08T20:52:26.291724 #6484]  INFO -- default-ubuntu-1804: Preparing group_vars
+I, [2018-10-08T20:52:26.292700 #6484]  INFO -- default-ubuntu-1804: nothing to do for group_vars
+I, [2018-10-08T20:52:26.292700 #6484]  INFO -- default-ubuntu-1804: Preparing additional_copy_path
+I, [2018-10-08T20:52:26.293675 #6484]  INFO -- default-ubuntu-1804: Preparing host_vars
+I, [2018-10-08T20:52:26.294651 #6484]  INFO -- default-ubuntu-1804: nothing to do for host_vars
+I, [2018-10-08T20:52:26.294651 #6484]  INFO -- default-ubuntu-1804: Preparing hosts file
+I, [2018-10-08T20:52:26.301478 #6484]  INFO -- default-ubuntu-1804: Preparing spec
+I, [2018-10-08T20:52:26.302453 #6484]  INFO -- default-ubuntu-1804: nothing to do for spec
+I, [2018-10-08T20:52:26.302453 #6484]  INFO -- default-ubuntu-1804: Preparing library plugins
+I, [2018-10-08T20:52:26.303428 #6484]  INFO -- default-ubuntu-1804: nothing to do for library plugins
+I, [2018-10-08T20:52:26.304404 #6484]  INFO -- default-ubuntu-1804: Preparing callback plugins
+I, [2018-10-08T20:52:26.305379 #6484]  INFO -- default-ubuntu-1804: nothing to do for callback plugins
+I, [2018-10-08T20:52:26.305379 #6484]  INFO -- default-ubuntu-1804: Preparing filter_plugins
+I, [2018-10-08T20:52:26.306355 #6484]  INFO -- default-ubuntu-1804: nothing to do for filter_plugins
+I, [2018-10-08T20:52:26.308305 #6484]  INFO -- default-ubuntu-1804: Preparing lookup_plugins
+I, [2018-10-08T20:52:26.310257 #6484]  INFO -- default-ubuntu-1804: nothing to do for lookup_plugins
+I, [2018-10-08T20:52:26.311232 #6484]  INFO -- default-ubuntu-1804: Preparing ansible vault password
+I, [2018-10-08T20:52:26.311232 #6484]  INFO -- default-ubuntu-1804: Preparing additional_ssh_private_keys
+I, [2018-10-08T20:52:26.312207 #6484]  INFO -- default-ubuntu-1804: nothing to do for additional_ssh_private_keys
+I, [2018-10-08T20:52:26.312207 #6484]  INFO -- default-ubuntu-1804: Finished Preparing files for transfer
+I, [2018-10-08T20:52:26.314158 #6484]  INFO -- default-ubuntu-1804: Installing ansible, will try to determine platform os
+I, [2018-10-08T20:52:34.306072 #6484]  INFO -- default-ubuntu-1804: Transferring files to <default-ubuntu-1804>
+I, [2018-10-08T20:52:40.837143 #6484]  INFO -- default-ubuntu-1804: [1;35m [WARNING]: Found both group and host with same name: localhost[0m
+I, [2018-10-08T20:52:40.839094 #6484]  INFO -- default-ubuntu-1804: [1;35m[0m
+I, [2018-10-08T20:52:41.353106 #6484]  INFO -- default-ubuntu-1804: 
+I, [2018-10-08T20:52:41.353106 #6484]  INFO -- default-ubuntu-1804: PLAY [localhost] ***************************************************************
+I, [2018-10-08T20:52:41.364824 #6484]  INFO -- default-ubuntu-1804: 
+I, [2018-10-08T20:52:41.364824 #6484]  INFO -- default-ubuntu-1804: TASK [Gathering Facts] *********************************************************
+I, [2018-10-08T20:52:42.759515 #6484]  INFO -- default-ubuntu-1804: [0;32mok: [localhost][0m
+I, [2018-10-08T20:52:42.793662 #6484]  INFO -- default-ubuntu-1804: 
+I, [2018-10-08T20:52:42.797555 #6484]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Include OS specific variables.] *********************
+I, [2018-10-08T20:52:42.832666 #6484]  INFO -- default-ubuntu-1804: [0;32mok: [localhost][0m
+I, [2018-10-08T20:52:42.878521 #6484]  INFO -- default-ubuntu-1804: 
+I, [2018-10-08T20:52:42.879483 #6484]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Ensure selected packages are present] ***************
+I, [2018-10-08T20:52:43.016907 #6484]  INFO -- default-ubuntu-1804: [0;36mincluded: /tmp/kitchen/roles/linux-dev-playbook/tasks/packages/install.yml for localhost[0m
+I, [2018-10-08T20:52:43.073477 #6484]  INFO -- default-ubuntu-1804: 
+I, [2018-10-08T20:52:43.074453 #6484]  INFO -- default-ubuntu-1804: TASK [linux-dev-playbook : Install os packages] ********************************
+I, [2018-10-08T20:52:45.738072 #6484]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=vim)[0m
+I, [2018-10-08T20:52:48.265071 #6484]  INFO -- default-ubuntu-1804: [0;32mok: [localhost] => (item=git)[0m
+I, [2018-10-08T21:01:48.278259 #6484]  INFO -- default-ubuntu-1804: [0;33mchanged: [localhost] => (item=nmap)[0m
