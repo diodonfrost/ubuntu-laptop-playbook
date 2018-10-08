@@ -1,20 +1,18 @@
 ---
 # Install Puppetlabs repos
 
-- name: "(Install: Debian/Ubuntu) Install Puppetlabs official repos"
-  block:
-
 - name: Add an Puppetlabs signing key on Debian
   apt_key:
     url: http://apt.puppetlabs.com/DEB-GPG-KEY-puppetlabs
     state: present
 
-- name: add Puppetlabs repository on Debian
-  apt_repository:
-    repo: "deb http://apt.puppetlabs.com/{{ ansible_distribution_release }} puppet{{ puppet_version }}"
+- name: Add Puppetlabs repository on Debian
+  apt:
+    deb: https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb
     state: present
 
 - name: Install puppet-agent
   package:
     name: puppet-agent
-    ensure: present
+    update_cache: yes
+    state: present

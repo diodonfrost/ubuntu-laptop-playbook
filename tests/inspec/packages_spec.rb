@@ -22,12 +22,21 @@ control 'install-03' do
   impact 1.0
   title 'Docker install'
   desc 'Docker should be installed'
-  describe package('docker') do
+  describe package('docker-ce') do
     it { should be_installed }
   end
 end
 
 control 'install-04' do
+  impact 1.0
+  title 'GCP sdk install'
+  desc 'Google cloud sdk should be installed'
+  describe package('google-cloud-sdk') do
+    it { should be_installed }
+  end
+end
+
+control 'install-05' do
   impact 1.0
   title 'Puppet install'
   desc 'Puppet-agent should be installed'
@@ -36,7 +45,7 @@ control 'install-04' do
   end
 end
 
-control 'install-05' do
+control 'install-06' do
   impact 1.0
   title 'Vagrant install'
   desc 'Vagrant should be installed'

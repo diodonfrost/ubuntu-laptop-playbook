@@ -21,8 +21,6 @@ verifier:
 
 # Build platforms
 platforms:
-  - name: centos-7
-  - name: fedora-28
   - name: ubuntu-18.04
   - name: ubuntu-16.04
 
