@@ -11,15 +11,16 @@
     url: https://download.docker.com/linux/{{ ansible_distribution | lower}}/gpg
     state: present
 
-- name: add Docker repository on Debian
+- name: Add Docker repository on Debian
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
     state: present
 
 - name: Install docker
-  package:
+  apt:
     name: docker-ce
-    ensure: present
+    update_cache: yes
+    state: present
 
 - name: Service docker
   service:

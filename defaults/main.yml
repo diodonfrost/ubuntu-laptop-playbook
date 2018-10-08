@@ -1,13 +1,6 @@
 ---
 # defaults file for linux-dev-playbook
 
-# Install configuration management tool Puppet.
-# Default is true.
-puppet_install: true
-
-# Specify puppet-agent version
-puppet_version: "5"
-
 # Install text editor Atom.
 # Default is true.
 atom_install: true
@@ -20,9 +13,20 @@ discord_install: true
 # Default is true.
 docker_install: true
 
+# Install google sdk for cloud provider
+# Default is true
+gcloud_install: true
+
 # Install VirtualBox.
 # Default is true.
 virtualbox_install: true
+
+# Install configuration management tool Puppet.
+# Default is true.
+puppet_install: true
+
+# Specify puppet-agent version
+puppet_version: "5"
 
 # Install provisionner Vagrant.
 # Default is true.

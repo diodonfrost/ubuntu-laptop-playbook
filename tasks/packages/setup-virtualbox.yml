@@ -6,7 +6,7 @@
     url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
     state: present
 
-- name: add virtualbox repository on Debian
+- name: Add virtualbox Debian repository
   apt_repository:
     repo: deb https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib
     state: present
@@ -14,4 +14,4 @@
 - name: Install virtualbox
   package:
     name: virtualbox
-    ensure: present
+    state: present

@@ -19,6 +19,10 @@
   import_tasks: setup-docker.yml
   when: docker_install == true
 
+- name: Install google cloud sdk
+  import_tasks: setup-gcloud-sdk.yml
+  when: gcloud_install == true
+
 - name: Install Puppet
   import_tasks: setup-puppet.yml
   when: puppet_install == true
