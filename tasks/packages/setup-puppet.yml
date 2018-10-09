@@ -1,7 +1,7 @@
 ---
 # Install Puppetlabs repos
 
-- name: Add an Puppetlabs signing key on Debian
+- name: Add Puppetlabs signing key on Debian
   apt_key:
     url: http://apt.puppetlabs.com/DEB-GPG-KEY-puppetlabs
     state: present
