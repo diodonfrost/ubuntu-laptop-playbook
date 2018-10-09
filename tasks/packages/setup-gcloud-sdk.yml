@@ -1,7 +1,7 @@
 ---
 # Install Google cloud repos
 
-- name: Add an Google cloud repository signing key on Debian
+- name: Add Google cloud repository signing key on Debian
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
     state: present

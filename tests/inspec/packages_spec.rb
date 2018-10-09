@@ -25,6 +25,10 @@ control 'install-03' do
   describe package('docker-ce') do
     it { should be_installed }
   end
+  describe file('/usr/local/bin/docker-compose') do
+    it { should exist }
+    it { should be_executable }
+  end
 end
 
 control 'install-04' do
