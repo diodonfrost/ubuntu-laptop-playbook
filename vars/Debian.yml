@@ -8,6 +8,8 @@ os_packages:
   - openssh-server
   - python
   - python-dev
+  - terminator
+  - vlc
 
 atom_packages_requirement:
   - gconf2
