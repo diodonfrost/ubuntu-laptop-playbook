@@ -30,10 +30,10 @@ install:
 
 script:
   # Check the role/playbook's syntax.
-  - ansible-playbook playbook.yml --syntax-check
+  - ansible-playbook tests/playbook-without-rvm.yml --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook playbook.yml
+  - ansible-playbook tests/playbook-without-rvm.yml
 
   # inspec tests
   - inspec exec tests/inspec
