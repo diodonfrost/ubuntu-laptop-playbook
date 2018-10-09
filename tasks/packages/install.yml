@@ -10,27 +10,34 @@
 - name: Install text editor Atom
   import_tasks: setup-atom.yml
   when: atom_install == true
+  tags: atom
 
 - name: Install voice and text chat Discord
   import_tasks: setup-discord.yml
   when: discord_install == true
+  tags: discord
 
 - name: Install Docker
   import_tasks: setup-docker.yml
   when: docker_install == true
+  tags: docker
 
 - name: Install google cloud sdk
   import_tasks: setup-gcloud-sdk.yml
   when: gcloud_install == true
+  tags: gcloud
 
 - name: Install Puppet
   import_tasks: setup-puppet.yml
   when: puppet_install == true
+  tags: puppet
 
 - name: Install Vagrant
   import_tasks: setup-vagrant.yml
   when: vagrant_install == true
+  tags: vagrant
 
 - name: Install Virtualbox
   import_tasks: setup-virtualbox.yml
   when: virtualbox_install == true
+  tags: virtualbox
