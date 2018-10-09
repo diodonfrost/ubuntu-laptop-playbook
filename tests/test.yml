@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - linux-dev-playbook
+    - ubuntu-laptop-playbook

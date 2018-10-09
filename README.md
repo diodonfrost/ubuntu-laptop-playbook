@@ -1,38 +1,100 @@
-Role Name
-=========
+# Ubuntu laptop playbook
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.org/diodonfrost/ubuntu-laptop-playbook.svg?branch=master)](https://travis-ci.org/diodonfrost/ubuntu-laptop-playbook)
 
-Requirements
-------------
+This playbook installs and configures most of the software I use on my Ubuntu laptop for Cloud and software development.
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## Installation
 
-Role Variables
---------------
+  1. [Install Ansible](http://docs.ansible.com/intro_installation.html).
+  2. Clone this repository to your local drive.
+  3. Run 'ansible-galaxy install -r requirements.yml' inside this directory to install required Ansible roles.
+  4. Run 'ansible-playbook playbook.yml' inside this directory.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+### Running a specific set of tagged tasks
 
-Dependencies
-------------
+You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
+The tags available:
+  - atom
+  - discord
+  - docker
+  - gcloud
+  - puppet
+  - vagrant
+  - virtualbox
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+    ansible-playbook playbook.yml --tags "atom,docker,puppet"
 
-Example Playbook
-----------------
+## Overriding Defaults
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```yaml
+---
+# defaults file for linux-dev-playbook
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+# Install text editor Atom.
+# Default is true.
+atom_install: true
 
-License
--------
+# Install voice and text chat Discord.
+# Default is true.
+discord_install: true
 
-BSD
+# Install Docker.
+# Default is true.
+docker_install: true
 
-Author Information
-------------------
+# Install google sdk for cloud provider
+# Default is true
+gcloud_install: true
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+# Install VirtualBox.
+# Default is true.
+virtualbox_install: true
+
+# Install configuration management tool Puppet.
+# Default is true.
+puppet_install: true
+
+# Specify puppet-agent version
+puppet_version: "5"
+
+# Install provisionner Vagrant.
+# Default is true.
+vagrant_install: true
+
+# Install shell Oh-My-Zsh.
+# Default is true.
+ohmyzsh_install: true
+```
+
+## Dependencies
+
+None
+
+## Local Testing
+
+The preferred way of locally testing the role is to use Vagrant. You will have to install Vagrant on your system.
+
+For all our tests we use test-kitchen.
+
+Next install test-kitchen:
+
+```shell
+# Install dependencies
+gem install bundler
+bundle install
+```
+### Testing with Virtualbox
+
+```shell
+# fast test on one machine
+kitchen test default-ubuntu
+```
+
+## License
+
+Apache 2
+
+## Author Information
+
+This role was created in 2018 by diodonfrost.
