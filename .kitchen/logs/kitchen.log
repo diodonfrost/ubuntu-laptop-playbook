@@ -1,0 +1,83 @@
+I, [2018-10-10T19:48:29.288946 #3408]  INFO -- Kitchen: -----> Starting Kitchen (v1.23.2)
+I, [2018-10-10T19:48:30.237095 #3408]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu-1804>
+I, [2018-10-10T19:48:30.237622 #3408]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1804>...
+I, [2018-10-10T19:48:30.239612 #3408]  INFO -- Kitchen: -----> Testing <default-ubuntu-1804>
+I, [2018-10-10T19:48:30.239840 #3408]  INFO -- Kitchen: -----> Creating <default-ubuntu-1804>...
+I, [2018-10-10T19:59:30.895189 #3408]  INFO -- Kitchen: -----> Converging <default-ubuntu-1804>...
+I, [2018-10-10T20:24:06.308250 #3408]  INFO -- Kitchen: -----> Setting up <default-ubuntu-1804>...
+I, [2018-10-10T20:24:06.308821 #3408]  INFO -- Kitchen: -----> Verifying <default-ubuntu-1804>...
+E, [2018-10-10T20:24:09.208987 #3408] ERROR -- Kitchen: ------Exception-------
+E, [2018-10-10T20:24:09.209033 #3408] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2018-10-10T20:24:09.209047 #3408] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Verify failed on instance <default-ubuntu-1804>.  Please see .kitchen/logs/default-ubuntu-1804.log for more details
+E, [2018-10-10T20:24:09.209077 #3408] ERROR -- Kitchen: ----------------------
+E, [2018-10-10T20:24:09.209102 #3408] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-10-10T20:24:09.209131 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:183:in `report_errors'
+E, [2018-10-10T20:24:09.209150 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:174:in `run_action'
+E, [2018-10-10T20:24:09.209180 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command/test.rb:42:in `block in call'
+E, [2018-10-10T20:24:09.209211 #3408] ERROR -- Kitchen: /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-10T20:24:09.209221 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command/test.rb:38:in `call'
+E, [2018-10-10T20:24:09.209233 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/cli.rb:52:in `perform'
+E, [2018-10-10T20:24:09.209244 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/cli.rb:245:in `test'
+E, [2018-10-10T20:24:09.209254 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/thor-0.20.0/lib/thor/command.rb:27:in `run'
+E, [2018-10-10T20:24:09.209266 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/thor-0.20.0/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2018-10-10T20:24:09.209276 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/thor-0.20.0/lib/thor.rb:387:in `dispatch'
+E, [2018-10-10T20:24:09.209287 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/thor-0.20.0/lib/thor/base.rb:466:in `start'
+E, [2018-10-10T20:24:09.209300 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2018-10-10T20:24:09.209317 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2018-10-10T20:24:09.209342 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/bin/kitchen:13:in `<top (required)>'
+E, [2018-10-10T20:24:09.209352 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/bin/kitchen:23:in `load'
+E, [2018-10-10T20:24:09.209363 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/bin/kitchen:23:in `<main>'
+E, [2018-10-10T20:24:09.209374 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/bin/ruby_executable_hooks:24:in `eval'
+E, [2018-10-10T20:24:09.209385 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/bin/ruby_executable_hooks:24:in `<main>'
+E, [2018-10-10T20:24:09.209398 #3408] ERROR -- Kitchen: ----End Backtrace-----
+E, [2018-10-10T20:24:09.209427 #3408] ERROR -- Kitchen: -Composite Exception--
+E, [2018-10-10T20:24:09.209439 #3408] ERROR -- Kitchen: Class: Kitchen::InstanceFailure
+E, [2018-10-10T20:24:09.209474 #3408] ERROR -- Kitchen: Message: Verify failed on instance <default-ubuntu-1804>.  Please see .kitchen/logs/default-ubuntu-1804.log for more details
+E, [2018-10-10T20:24:09.209505 #3408] ERROR -- Kitchen: ----------------------
+E, [2018-10-10T20:24:09.209515 #3408] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-10-10T20:24:09.209526 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/kitchen-inspec-0.24.0/lib/kitchen/verifier/inspec.rb:98:in `call'
+E, [2018-10-10T20:24:09.209539 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:458:in `block in verify_action'
+E, [2018-10-10T20:24:09.209550 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2018-10-10T20:24:09.209560 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:513:in `block in action'
+E, [2018-10-10T20:24:09.209570 #3408] ERROR -- Kitchen: /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-10T20:24:09.209583 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:512:in `action'
+E, [2018-10-10T20:24:09.209600 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:450:in `verify_action'
+E, [2018-10-10T20:24:09.209612 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2018-10-10T20:24:09.209636 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2018-10-10T20:24:09.209646 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2018-10-10T20:24:09.209656 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `each'
+E, [2018-10-10T20:24:09.209689 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2018-10-10T20:24:09.209717 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:162:in `verify'
+E, [2018-10-10T20:24:09.209745 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:191:in `block in test'
+E, [2018-10-10T20:24:09.209773 #3408] ERROR -- Kitchen: /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-10T20:24:09.209786 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:187:in `test'
+E, [2018-10-10T20:24:09.209797 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-10-10T20:24:09.209808 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-10-10T20:24:09.209818 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-10-10T20:24:09.209829 #3408] ERROR -- Kitchen: ----End Backtrace-----
+E, [2018-10-10T20:24:09.209839 #3408] ERROR -- Kitchen: ---Nested Exception---
+E, [2018-10-10T20:24:09.209849 #3408] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2018-10-10T20:24:09.209865 #3408] ERROR -- Kitchen: Message: Inspec Runner returns 1
+E, [2018-10-10T20:24:09.209876 #3408] ERROR -- Kitchen: ----------------------
+E, [2018-10-10T20:24:09.209886 #3408] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-10-10T20:24:09.209908 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/kitchen-inspec-0.24.0/lib/kitchen/verifier/inspec.rb:98:in `call'
+E, [2018-10-10T20:24:09.209918 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:458:in `block in verify_action'
+E, [2018-10-10T20:24:09.209935 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2018-10-10T20:24:09.209965 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:513:in `block in action'
+E, [2018-10-10T20:24:09.209975 #3408] ERROR -- Kitchen: /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-10T20:24:09.209989 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:512:in `action'
+E, [2018-10-10T20:24:09.210017 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:450:in `verify_action'
+E, [2018-10-10T20:24:09.210049 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2018-10-10T20:24:09.210059 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2018-10-10T20:24:09.210069 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2018-10-10T20:24:09.210079 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `each'
+E, [2018-10-10T20:24:09.210089 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2018-10-10T20:24:09.210099 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:162:in `verify'
+E, [2018-10-10T20:24:09.210109 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:191:in `block in test'
+E, [2018-10-10T20:24:09.210120 #3408] ERROR -- Kitchen: /usr/local/rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2018-10-10T20:24:09.210130 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/instance.rb:187:in `test'
+E, [2018-10-10T20:24:09.210142 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-10-10T20:24:09.210159 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-10-10T20:24:09.210171 #3408] ERROR -- Kitchen: /usr/local/rvm/gems/ruby-2.5.1/gems/test-kitchen-1.23.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-10-10T20:24:09.210194 #3408] ERROR -- Kitchen: ----End Backtrace-----

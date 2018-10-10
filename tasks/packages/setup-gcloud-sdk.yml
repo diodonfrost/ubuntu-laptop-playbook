@@ -1,5 +1,5 @@
 ---
-# Install Google cloud repos
+# Install Google cloud repos and packages
 
 - name: Add Google cloud repository signing key on Debian
   apt_key:
@@ -13,6 +13,9 @@
 
 - name: Install sdk for Google cloud
   package:
-    name: google-cloud-sdk
+    name: "{{ item }}"
     update_cache: yes
     state: present
+  with_items:
+    - google-cloud-sdk
+    - kubectl

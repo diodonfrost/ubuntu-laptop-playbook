@@ -5,6 +5,10 @@
 # Default is true.
 atom_install: true
 
+# Install awscli.
+# Default is true.
+awscli_install: true
+
 # Install voice and text chat Discord.
 # Default is true.
 discord_install: true
