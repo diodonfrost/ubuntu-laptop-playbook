@@ -12,6 +12,11 @@
   when: atom_install == true
   tags: atom
 
+- name: Install awscli
+  import_tasks: setup-aws-cli.yml
+  when: awscli_install == true
+  tags: awscli
+
 - name: Install voice and text chat Discord
   import_tasks: setup-discord.yml
   when: discord_install == true

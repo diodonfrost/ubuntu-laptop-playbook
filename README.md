@@ -29,11 +29,13 @@ The tags available:
 
 ```yaml
 ---
-# defaults file for linux-dev-playbook
-
 # Install text editor Atom.
 # Default is true.
 atom_install: true
+
+# Install awscli.
+# Default is true.
+awscli_install: true
 
 # Install voice and text chat Discord.
 # Default is true.
@@ -65,6 +67,7 @@ vagrant_install: true
 # Install shell Oh-My-Zsh.
 # Default is true.
 ohmyzsh_install: true
+
 ```
 
 ## Dependencies

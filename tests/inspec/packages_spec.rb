@@ -66,3 +66,12 @@ control 'install-06' do
     it { should be_installed }
   end
 end
+
+control 'install-07' do
+  impact 1.0
+  titel 'Aws cli'
+  desc 'Aws-cli should be install'
+  describe pip('awscli') do
+    it { should be_installed }
+  end
+end
