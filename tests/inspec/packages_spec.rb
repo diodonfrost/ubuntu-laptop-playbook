@@ -69,7 +69,7 @@ end
 
 control 'install-07' do
   impact 1.0
-  titel 'Aws cli'
+  title 'Aws cli'
   desc 'Aws-cli should be install'
   describe pip('awscli') do
     it { should be_installed }

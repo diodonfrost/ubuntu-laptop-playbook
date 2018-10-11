@@ -11,8 +11,11 @@
     deb: https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb
     state: present
 
-- name: Install puppet-agent
+- name: Install puppet-agent and puppet developpement kit
   package:
-    name: puppet-agent
+    name: "{{ item }}"
     update_cache: yes
     state: present
+  with_items:
+    - puppet-agent
+    - pdk
