@@ -30,10 +30,10 @@ install:
 
 script:
   # Check the role/playbook's syntax.
-  - ansible-playbook tests/playbook-travis.yml --syntax-check
+  - ansible-playbook playbook-travis.yml --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook tests/playbook-travis.yml
+  - ansible-playbook playbook-travis.yml
 
   # inspec tests
   - inspec exec tests/inspec
