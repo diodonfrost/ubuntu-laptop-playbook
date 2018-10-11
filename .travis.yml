@@ -26,14 +26,14 @@ install:
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
 
   # Install Ansible role
-  - ansible-galaxy install -r requirements.yml
+  - sudo ansible-galaxy install -r requirements.yml
 
 script:
   # Check the role/playbook's syntax.
-  - ansible-playbook playbook-travis.yml --syntax-check
+  - sudo ansible-playbook playbook.yml --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook playbook-travis.yml
+  - sudo ansible-playbook playbook.yml
 
   # inspec tests
-  - inspec exec tests/inspec
+  - sudo inspec exec tests/inspec
