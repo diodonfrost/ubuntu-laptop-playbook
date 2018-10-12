@@ -5,6 +5,7 @@ os_packages:
   - filezilla
   - openvpn
   - keepassx
+  - libssl-dev
   - openssh-server
   - python
   - python-dev
