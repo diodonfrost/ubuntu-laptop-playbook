@@ -33,7 +33,7 @@
   tags: gcloud
 
 - name: Install Kubernetes Minikube
-  import_tasks: setup-minikube-sdk.yml
+  import_tasks: setup-minikube.yml
   when: minikube_install == true
   tags: minikube
 
