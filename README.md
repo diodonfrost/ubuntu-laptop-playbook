@@ -28,7 +28,8 @@ The tags available:
 ## Overriding Defaults
 
 ```yaml
----
+# defaults file for linux-dev-playbook
+
 # Install text editor Atom.
 # Default is true.
 atom_install: true
@@ -49,6 +50,10 @@ docker_install: true
 # Default is true
 gcloud_install: true
 
+# Install Minikube for deploy local kubernetes cluster
+# Default is true
+minikube_install: true
+
 # Install VirtualBox.
 # Default is true.
 virtualbox_install: true
@@ -67,7 +72,6 @@ vagrant_install: true
 # Install shell Oh-My-Zsh.
 # Default is true.
 ohmyzsh_install: true
-
 ```
 
 ## Dependencies

@@ -32,6 +32,11 @@
   when: gcloud_install == true
   tags: gcloud
 
+- name: Install Kubernetes Minikube
+  import_tasks: setup-minikube-sdk.yml
+  when: minikube_install == true
+  tags: minikube
+
 - name: Install Puppet
   import_tasks: setup-puppet.yml
   when: puppet_install == true

@@ -1,0 +1,8 @@
+---
+# Install minikube for deploy local Kubernetes cluster
+
+- name: Minikube download
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64
+    dest: /usr/local/bin/minikube
+    mode: 0755
