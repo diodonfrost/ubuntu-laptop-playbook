@@ -7,6 +7,12 @@
     state: present
   with_items: "{{ os_packages }}"
 
+- name: Snapd service
+  service:
+    name: snapd
+    state: started
+    enabled: yes
+
 - name: Install text editor Atom
   import_tasks: setup-atom.yml
   when: atom_install == true
