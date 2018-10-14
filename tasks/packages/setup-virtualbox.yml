@@ -1,15 +1,5 @@
 ---
-# Install Virtualbox repos
-
-- name: Add virtualbox signing key on Debian
-  apt_key:
-    url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
-    state: present
-
-- name: Add virtualbox Debian repository
-  apt_repository:
-    repo: deb https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib
-    state: present
+# Install Virtualbox install
 
 - name: Install virtualbox
   package:
