@@ -92,3 +92,13 @@ control 'install-08' do
     it { should be_executable }
   end
 end
+
+control 'install-08' do
+  impact 1.0
+  title 'Minikube install'
+  desc 'Minikube should be install'
+  describe file('/usr/local/bin/minikube') do
+    it { should exist }
+    it { should be_executable }
+  end
+end
