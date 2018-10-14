@@ -102,3 +102,13 @@ control 'install-08' do
     it { should be_executable }
   end
 end
+
+control 'install-09' do
+  impact 1.0
+  title 'Slack install'
+  desc 'Slack should be install'
+  describe file('/snap/bin/slack') do
+    it { should exist }
+    it { should be_executable }
+  end
+end

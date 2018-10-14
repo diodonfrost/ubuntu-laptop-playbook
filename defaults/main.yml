@@ -36,6 +36,10 @@ puppet_install: true
 # Specify puppet-agent version
 puppet_version: "5"
 
+# Install text chat Slack.
+# Default is true.
+slack_install: true
+
 # Install provisionner Vagrant.
 # Default is true.
 vagrant_install: true
