@@ -50,7 +50,7 @@
 
 - name: Install Slack
   import_tasks: setup-slack.yml
-  when: puppet_slack == true
+  when: slack_install == true
   tags: slack
 
 - name: Install Vagrant

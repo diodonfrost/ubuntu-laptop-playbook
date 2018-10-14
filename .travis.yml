@@ -8,16 +8,14 @@ env:
 
 before_install:
   # Build docker container
-  - 'sudo docker pull diodonfrost/${distribution}-${version}-ansible:latest'
+  - 'sudo docker pull ${distribution}:${version}'
+  - 'sudo docker build --no-cache --rm --file=tests/dockerfiles/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:snap tests'
 
 script:
   - container_id=$(mktemp)
 
   # Run container and mount ansible role with it
-  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /dev/fuse:/dev/fuse -v /lib/modules:/lib/modules:ro --volume="${PWD}":/etc/ansible/roles/ubuntu-laptop-playbook:ro diodonfrost/${distribution}-${version}-ansible:latest > "${container_id}"'
-
-  # Params snap installer on docker
-  - 'sudo docker exec "$(cat ${container_id})" apt update ; apt install -y fuse snapd snap-confine squashfuse sudo ; dpkg-divert --local --rename --add /sbin/udevadm ; ln -s /bin/true /sbin/udevadm'
+  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /dev/fuse:/dev/fuse -v /lib/modules:/lib/modules:ro --volume="${PWD}":/etc/ansible/roles/ubuntu-laptop-playbook:ro ${distribution}-${version}:snap  > "${container_id}"'
 
   # Check syntax
   - 'sudo docker exec "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=1 ansible-playbook /etc/ansible/roles/ubuntu-laptop-playbook/tests/test.yml --syntax-check'
@@ -31,6 +29,7 @@ script:
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
+
   # Test role
   - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
 
