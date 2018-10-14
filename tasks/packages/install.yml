@@ -42,6 +42,11 @@
   when: puppet_install == true
   tags: puppet
 
+- name: Install Slack
+  import_tasks: setup-slack.yml
+  when: puppet_slack == true
+  tags: slack
+
 - name: Install Vagrant
   import_tasks: setup-vagrant.yml
   when: vagrant_install == true

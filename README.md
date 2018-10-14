@@ -16,10 +16,13 @@ This playbook installs and configures most of the software I use on my Ubuntu la
 You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
 The tags available:
   - atom
+  - aws-cli
   - discord
   - docker
   - gcloud
+  - minikube
   - puppet
+  - slack
   - vagrant
   - virtualbox
 
@@ -64,6 +67,10 @@ puppet_install: true
 
 # Specify puppet-agent version
 puppet_version: "5"
+
+# Install text chat Slack.
+# Default is true.
+slack_install: true
 
 # Install provisionner Vagrant.
 # Default is true.
