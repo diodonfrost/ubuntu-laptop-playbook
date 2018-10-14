@@ -1,12 +1,7 @@
 ---
 # Install text editor atom
 
-- name: Install packages requirement for atom
-  package:
-    name: "{{ item }}"
-  with_items: "{{ atom_packages_requirement }}"
-
-- name: Install text editor atom on Debian family system
-  apt:
-    deb: https://github.com/atom/atom/releases/download/v1.31.2/atom-amd64.deb
-    state: present
+- name: Install text editor Atom with package manager snap
+  shell: snap install atom --classic
+  args:
+    creates: /snap/bin/atom

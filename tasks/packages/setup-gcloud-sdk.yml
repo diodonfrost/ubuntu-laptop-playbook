@@ -20,36 +20,7 @@
     - google-cloud-sdk
     - kubectl
 
-- name: check Helm binay stat
-  stat:
-    path: /usr/local/bin/helm
-  changed_when: false
-  register: helm_binary
-
-- name: Download and install Helm
-  block:
-
-  - name: Download Helm
-    unarchive:
-      src: https://storage.googleapis.com/kubernetes-helm/helm-v2.11.0-linux-amd64.tar.gz
-      dest: /tmp
-      remote_src: yes
-      mode: 0755
-      exclude:
-        - LICENSE
-        - README.md
-        - tiller
-      creates: /usr/local/bin/helm
-
-  - name: Copy Helm binary in /usr/local/bin/
-    copy:
-      src: /tmp/linux-amd64/helm
-      dest: /usr/local/bin/helm
-      mode: 0755
-
-  - name: Cleanup Helm download directory
-    file:
-      path: /tmp/linux-adm64
-      state: absent
-
-  when: not helm_binary.stat.exists
+- name: Install Helm with package manager snap
+  shell: snap install helm --classic
+  args:
+    creates: /snap/bin/helm

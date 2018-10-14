@@ -1,12 +1,7 @@
 ---
 # Install voice and text chat Discord.
 
-- name: Install packages requirement for discord
-  package:
-    name: "{{ item }}"
-  with_items: "{{ discord_packages_requirement }}"
-
-- name: Install Discord on Debian family system
-  apt:
-    deb: https://dl.discordapp.net/apps/linux/0.0.5/discord-0.0.5.deb
-    state: present
+- name: Install Discord with package manager snap
+  shell: snap install discord
+  args:
+    creates: /snap/bin/discord
