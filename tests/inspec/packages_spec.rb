@@ -4,8 +4,9 @@ control 'install-01' do
   impact 1.0
   title 'Atom install'
   desc 'Text editor Atom should be installed'
-  describe package('atom') do
-    it { should be_installed }
+  describe file('/snap/bin/atom') do
+    it { should exist }
+    it { should be_executable }
   end
 end
 
@@ -13,8 +14,9 @@ control 'install-02' do
   impact 1.0
   title 'Discord install'
   desc 'Discord should be installed'
-  describe package('discord') do
-    it { should be_installed }
+  describe file('/snap/bin/discord') do
+    it { should exist }
+    it { should be_executable }
   end
 end
 
@@ -37,6 +39,10 @@ control 'install-04' do
   desc 'Google cloud sdk should be installed'
   describe package('google-cloud-sdk') do
     it { should be_installed }
+  end
+  describe file('/snap/bin/helm') do
+    it { should exist }
+    it { should be_executable }
   end
 end
 
@@ -71,8 +77,9 @@ control 'install-07' do
   impact 1.0
   title 'Aws cli'
   desc 'Aws-cli should be install'
-  describe pip('awscli') do
-    it { should be_installed }
+  describe file('/snap/bin/aws-cli.aws') do
+    it { should exist }
+    it { should be_executable }
   end
 end
 

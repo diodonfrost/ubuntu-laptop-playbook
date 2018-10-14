@@ -1,8 +1,7 @@
 ---
+# Install aws cli
 
-# # Install aws cli
-
-- name: Install aws cli
-  pip:
-    name: awscli
-    extra_args: --upgrade
+- name: Install aws-cli with package manager snap
+  shell: snap install aws-cli --classic
+  args:
+    creates: /snap/bin/aws-cli.aws

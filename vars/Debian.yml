@@ -1,27 +1,19 @@
 os_packages:
-  - vim
-  - git
-  - nmap
   - filezilla
-  - openvpn
+  - git
+  - golang
   - keepassx
   - libssl-dev
+  - nmap
   - openssh-server
+  - openvpn
   - python
   - python-dev
   - python-pip
+  - snapd
   - terminator
+  - vim
   - vlc
-  - golang
-
-atom_packages_requirement:
-  - gconf2
-  - python
-  - python-dev
-
-discord_packages_requirement:
-  - libappindicator1
-  - libc++1
 
 docker_packages_requirement:
   - apt-transport-https
