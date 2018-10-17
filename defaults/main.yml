@@ -38,6 +38,10 @@ puppet_version: "5"
 
 # Install text chat Slack.
 # Default is true.
+spotify_install: true
+
+# Install text chat Slack.
+# Default is true.
 slack_install: true
 
 # Install provisionner Vagrant.

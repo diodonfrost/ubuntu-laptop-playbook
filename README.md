@@ -6,31 +6,34 @@ This playbook installs and configures most of the software I use on my Ubuntu la
 
 ## Installation
 
-  1. [Install Ansible](http://docs.ansible.com/intro_installation.html).
-  2. Clone this repository to your local drive.
-  3. Run 'ansible-galaxy install -r requirements.yml' inside this directory to install required Ansible roles.
-  4. Run 'ansible-playbook playbook.yml' inside this directory.
+1.  [Install Ansible](http://docs.ansible.com/intro_installation.html).
+2.  Clone this repository to your local drive.
+3.  Run 'ansible-galaxy install -r requirements.yml' inside this directory to install required Ansible roles.
+4.  Run 'ansible-playbook playbook.yml' inside this directory.
 
 ### Running a specific set of tagged tasks
 
 You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
 The tags available:
-  - atom
-  - aws-cli
-  - discord
-  - docker
-  - gcloud
-  - minikube
-  - puppet
-  - slack
-  - vagrant
-  - virtualbox
+
+-   atom
+-   aws-cli
+-   discord
+-   docker
+-   gcloud
+-   minikube
+-   puppet
+-   slack
+-   spotify
+-   vagrant
+-   virtualbox
 
     ansible-playbook playbook.yml --tags "atom,docker,puppet"
 
 ## Overriding Defaults
 
 ```yaml
+---
 # defaults file for linux-dev-playbook
 
 # Install text editor Atom.
@@ -70,6 +73,10 @@ puppet_version: "5"
 
 # Install text chat Slack.
 # Default is true.
+spotify_install: true
+
+# Install text chat Slack.
+# Default is true.
 slack_install: true
 
 # Install provisionner Vagrant.
@@ -98,6 +105,7 @@ Next install test-kitchen:
 gem install bundler
 bundle install
 ```
+
 ### Testing with Virtualbox
 
 ```shell

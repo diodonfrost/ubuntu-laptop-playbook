@@ -1,4 +1,5 @@
 os_packages:
+  - ansible-lint
   - filezilla
   - git
   - golang

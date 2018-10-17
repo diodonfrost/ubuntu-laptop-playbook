@@ -53,6 +53,11 @@
   when: slack_install == true
   tags: slack
 
+- name: Install Spotify
+  import_tasks: setup-spotify.yml
+  when: spotify_install == true
+  tags: spotify
+
 - name: Install Vagrant
   import_tasks: setup-vagrant.yml
   when: vagrant_install == true
