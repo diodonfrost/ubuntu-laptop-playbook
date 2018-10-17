@@ -1,0 +1,7 @@
+---
+# Install Spotify.
+
+- name: Install Spotify with package manager snap
+  shell: snap install spotify
+  args:
+    creates: /snap/bin/spotify
