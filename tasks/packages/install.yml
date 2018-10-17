@@ -62,8 +62,3 @@
   import_tasks: setup-vagrant.yml
   when: vagrant_install == true
   tags: vagrant
-
-- name: Install Virtualbox
-  import_tasks: setup-virtualbox.yml
-  when: virtualbox_install == true
-  tags: virtualbox

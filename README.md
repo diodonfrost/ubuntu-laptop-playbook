@@ -26,7 +26,6 @@ The tags available:
 -   slack
 -   spotify
 -   vagrant
--   virtualbox
 
     ansible-playbook playbook.yml --tags "atom,docker,puppet"
 
@@ -59,10 +58,6 @@ gcloud_install: true
 # Install Minikube for deploy local kubernetes cluster
 # Default is true
 minikube_install: true
-
-# Install VirtualBox.
-# Default is true.
-virtualbox_install: true
 
 # Install configuration management tool Puppet.
 # Default is true.
