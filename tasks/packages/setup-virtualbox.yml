@@ -1,7 +1,0 @@
----
-# Install Virtualbox install
-
-- name: Install virtualbox
-  package:
-    name: virtualbox
-    state: present

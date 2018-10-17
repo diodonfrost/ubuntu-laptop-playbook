@@ -25,10 +25,6 @@ gcloud_install: true
 # Default is true
 minikube_install: true
 
-# Install VirtualBox.
-# Default is true.
-virtualbox_install: true
-
 # Install configuration management tool Puppet.
 # Default is true.
 puppet_install: true
