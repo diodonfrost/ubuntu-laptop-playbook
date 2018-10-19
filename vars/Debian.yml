@@ -1,5 +1,4 @@
 os_packages:
-  - ansible-lint
   - cryptsetup
   - ecryptfs-utils
   - filezilla
@@ -25,3 +24,9 @@ docker_packages_requirement:
   - ca-certificates
   - curl
   - software-properties-common
+
+atom_os_packages:
+  - ansible-lint
+  - puppet-lint
+  - pylint
+  - shellcheck

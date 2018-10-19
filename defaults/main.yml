@@ -59,13 +59,19 @@ atom_packages:
   - language-ansible
   - language-chef
   - language-docker
+  - language-groovy
   - language-puppet
   - language-terraform
   - linter
   - linter-ansible-linting
   - linter-docker
   - linter-erb
+  - linter-golinter
   - linter-markdown
   - linter-puppet-lint
+  - linter-pylint
+  - linter-ruby
+  - linter-shellcheck
   - linter-ui-default
+  - markdown-preview-plus
   - minimap

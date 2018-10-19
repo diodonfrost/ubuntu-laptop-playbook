@@ -11,3 +11,9 @@
   args:
     creates: "{{ ansible_env.HOME }}/.atom/packages/{{ item }}"
   with_items: "{{ atom_packages }}"
+
+- name: Install os packages for linter
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ atom_os_packages }}"
