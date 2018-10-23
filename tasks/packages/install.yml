@@ -58,6 +58,11 @@
   when: spotify_install == true
   tags: spotify
 
+- name: Install Tusk
+  import_tasks: setup-tusk.yml
+  when: tusk_install == true
+  tags: tusk
+
 - name: Install Vagrant
   import_tasks: setup-vagrant.yml
   when: vagrant_install == true
