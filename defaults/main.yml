@@ -40,6 +40,10 @@ spotify_install: true
 # Default is true.
 slack_install: true
 
+# Install Tusk note.
+# Default is true.
+tusk_install: true
+
 # Install provisionner Vagrant.
 # Default is true.
 vagrant_install: true
