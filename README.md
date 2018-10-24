@@ -25,6 +25,7 @@ The tags available:
 -   puppet
 -   slack
 -   spotify
+-   tusk
 -   vagrant
 
     ansible-playbook playbook.yml --tags "atom,docker,puppet"
