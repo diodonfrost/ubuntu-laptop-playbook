@@ -43,11 +43,6 @@
   when: minikube_install == true
   tags: minikube
 
-- name: Install Puppet
-  import_tasks: setup-puppet.yml
-  when: puppet_install == true
-  tags: puppet
-
 - name: Install Slack
   import_tasks: setup-slack.yml
   when: slack_install == true

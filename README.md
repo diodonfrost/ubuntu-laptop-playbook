@@ -13,7 +13,7 @@ This playbook installs and configures most of the software I use on my Ubuntu la
 
 ### Running a specific set of tagged tasks
 
-You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook`'s `--tags` flag.
+You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook --tags` flag.
 The tags available:
 
 -   atom
