@@ -3,3 +3,5 @@
   remote_user: root
   roles:
     - ubuntu-laptop-playbook
+    - rvm.ruby
+    - diodonfrost.puppet

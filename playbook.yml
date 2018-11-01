@@ -14,6 +14,6 @@
         rvm1_install_path: /usr/local/rvm,         # Set to system location
         rvm1_user: root                            # Need root account to access system location
       }
-
+      - diodonfrost.puppet
   tasks:
     - include_tasks: tasks/main.yml
