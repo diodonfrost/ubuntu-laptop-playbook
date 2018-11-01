@@ -93,16 +93,6 @@ control 'install-08' do
   end
 end
 
-control 'install-08' do
-  impact 1.0
-  title 'Minikube install'
-  desc 'Minikube should be install'
-  describe file('/usr/local/bin/minikube') do
-    it { should exist }
-    it { should be_executable }
-  end
-end
-
 control 'install-09' do
   impact 1.0
   title 'Slack install'
@@ -118,6 +108,16 @@ control 'install-10' do
   title 'Spotify install'
   desc 'Spotify should be install'
   describe file('/snap/bin/spotify') do
+    it { should exist }
+    it { should be_executable }
+  end
+end
+
+control 'install-11' do
+  impact 1.0
+  title 'Tusk install'
+  desc 'Tusk should be install'
+  describe file('/snap/bin/tusk') do
     it { should exist }
     it { should be_executable }
   end
