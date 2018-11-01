@@ -17,6 +17,7 @@ os_packages:
   - vim
   - virtualbox
   - vlc
+  - wget
   - wireshark
 
 docker_packages_requirement:

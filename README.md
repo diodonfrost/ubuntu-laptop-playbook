@@ -25,6 +25,7 @@ The tags available:
 -   puppet
 -   slack
 -   spotify
+-   tusk
 -   vagrant
 
     ansible-playbook playbook.yml --tags "atom,docker,puppet"
@@ -74,6 +75,10 @@ spotify_install: true
 # Default is true.
 slack_install: true
 
+# Install Tusk note.
+# Default is true.
+tusk_install: true
+
 # Install provisionner Vagrant.
 # Default is true.
 vagrant_install: true
@@ -81,6 +86,34 @@ vagrant_install: true
 # Install shell Oh-My-Zsh.
 # Default is true.
 ohmyzsh_install: true
+
+atom_packages:
+  - atom-beautify
+  - atom-jinja2
+  - atom-material-ui
+  - busy-signal
+  - git-plus
+  - highlight-selected
+  - intentions
+  - language-ansible
+  - language-chef
+  - language-docker
+  - language-groovy
+  - language-puppet
+  - language-terraform
+  - linter
+  - linter-ansible-linting
+  - linter-docker
+  - linter-erb
+  - linter-golinter
+  - linter-markdown
+  - linter-puppet-lint
+  - linter-pylint
+  - linter-ruby
+  - linter-shellcheck
+  - linter-ui-default
+  - markdown-preview-plus
+  - minimap
 ```
 
 ## Dependencies
