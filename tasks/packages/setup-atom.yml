@@ -1,18 +1,26 @@
 ---
 # Install text editor atom
 
+- name : List user with home directory
+  shell: ls -1 /home
+  register: list_user
+
 - name: Install text editor Atom with package manager snap
   shell: snap install atom --classic
   args:
     creates: /snap/bin/atom
 
 - name: Install Atom module with Atom Package Manager
-  shell: "/snap/bin/apm install {{ item }}"
+  shell: "/snap/bin/apm install {{ item[0] }}"
   args:
-    creates: "{{ ansible_env.HOME }}/.atom/packages/{{ item }}"
-  with_items: "{{ atom_packages }}"
+    creates: "{{ ansible_env.HOME }}/.atom/packages/{{ item[0] }}"
+  become: yes
+  become_user: "{{ item[1] }}"
+  with_nested:
+    - "{{ atom_packages }}"
+    - "{{ list_user.stdout_lines }}"
 
-- name: Install os packages for linter
+- name: Install os packages for atom linter
   package:
     name: "{{ item }}"
     state: present
