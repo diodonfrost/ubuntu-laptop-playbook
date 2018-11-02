@@ -138,7 +138,7 @@ bundle install
 
 ```shell
 # fast test on one machine
-kitchen test default-ubuntu
+kitchen test default-ubuntu-1804
 ```
 
 ## License

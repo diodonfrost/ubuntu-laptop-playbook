@@ -8,6 +8,8 @@ driver:
 provisioner:
   name: ansible_playbook
   hosts: localhost
+  requirements_path: requirements.yml
+  playbook: tests/test.yml
   require_chef_for_busser: false
   require_ruby_for_busser: false
   require_ansible_omnibus: false
@@ -27,6 +29,3 @@ platforms:
 # Define playbook
 suites:
   - name: default
-    provisioner:
-      name: ansible_playbook
-      playbook: tests/test.yml
