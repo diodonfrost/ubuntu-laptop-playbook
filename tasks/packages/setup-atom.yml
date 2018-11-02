@@ -4,6 +4,7 @@
 - name : List user with home directory
   shell: ls -1 /home
   register: list_user
+  changed_when: false
 
 - name: Install text editor Atom with package manager snap
   shell: snap install atom --classic
