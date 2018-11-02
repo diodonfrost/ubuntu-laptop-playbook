@@ -1,0 +1,31 @@
+
+---
+# we use docker as plateform
+driver:
+  name: vagrant
+
+# Ansible will be our provisioner
+provisioner:
+  name: ansible_playbook
+  hosts: localhost
+  requirements_path: requirements.yml
+  playbook: tests/test.yml
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+  require_ansible_omnibus: false
+  idempotency_test: true
+
+# We use Inspec as testing framework
+verifier:
+  name: inspec
+  inspec_tests:
+    - path: tests/inspec
+
+# Build platforms
+platforms:
+  - name: ubuntu-18.04
+  - name: ubuntu-16.04
+
+# Define playbook
+suites:
+  - name: default
