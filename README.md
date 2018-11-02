@@ -121,24 +121,40 @@ atom_packages:
 None
 
 ## Local Testing
+The preferred way of locally testing the role is to use Docker. You will have to install Docker on your system. See Get started for a Docker package suitable to for your system.
 
-The preferred way of locally testing the role is to use Vagrant. You will have to install Vagrant on your system.
-
-For all our tests we use test-kitchen.
+You can also use vagrant and Virtualbox to run tests locally. You will have to install Virtualbox and Vagrant on your system. See Vagrant Downloads for a vagrant package suitable for your system. For all our tests we use test-kitchen. If you are not familiar with test-kitchen please have a look at their guide.
 
 Next install test-kitchen:
-
 ```shell
 # Install dependencies
 gem install bundler
 bundle install
 ```
 
-### Testing with Virtualbox
-
+### Testing with Docker
 ```shell
 # fast test on one machine
-kitchen test default-ubuntu-1804
+kitchen test default-ubuntu-18-04
+
+# Build environment and apply puppet manifest
+kitchen converge default-ubuntu-18-04
+
+# Launch inspec tests
+kitchen verify default-ubuntu-18-04
+```
+
+### Testing with Virtualbox
+```shell
+# Test with virtualbox
+export KITCHEN_YAML=".kitchen-vagrant.yml"
+kitchen test default-ubuntu-18-04
+
+# Build environment and apply puppet manifest
+kitchen converge default-ubuntu-18-04
+
+# Launch inspec tests
+kitchen verify default-ubuntu-18-04
 ```
 
 ## License
