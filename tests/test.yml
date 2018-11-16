@@ -5,3 +5,4 @@
   roles:
     - diodonfrost.puppet_agent
     - ubuntu-laptop-playbook
+    - diodonfrost.java
