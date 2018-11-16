@@ -22,13 +22,14 @@ The tags available:
 -   docker
 -   gcloud
 -   minikube
+-   openjdk
 -   puppet
 -   slack
 -   spotify
 -   tusk
 -   vagrant
 
-    ansible-playbook playbook.yml --tags "atom,docker,puppet"
+ansible-playbook playbook.yml --tags "atom,docker,tusk"
 
 ## Overriding Defaults
 
