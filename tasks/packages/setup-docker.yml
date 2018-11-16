@@ -27,6 +27,7 @@
     name: docker
     state: started
     enabled: yes
+  when: ansible_virtualization_type != "docker"
 
 - name: Install docker-compose
   get_url:
