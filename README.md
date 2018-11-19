@@ -23,6 +23,7 @@ The tags available:
 -   gcloud
 -   minikube
 -   openjdk
+-   packer
 -   puppet
 -   slack
 -   spotify
