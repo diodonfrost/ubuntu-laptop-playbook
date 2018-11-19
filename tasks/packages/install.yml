@@ -43,6 +43,11 @@
   when: minikube_install == true
   tags: minikube
 
+- name: Install Hashicorp Packer
+  import_tasks: setup-packer.yml
+  when: packer_install == true
+  tags: packer
+
 - name: Install Slack
   import_tasks: setup-slack.yml
   when: slack_install == true
