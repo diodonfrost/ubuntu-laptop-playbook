@@ -62,12 +62,9 @@ gcloud_install: true
 # Default is true
 minikube_install: true
 
-# Install configuration management tool Puppet.
-# Default is true.
-puppet_install: true
-
-# Specify puppet-agent version
-puppet_version: "5"
+# Install Hashicorp Packer
+# Default is true
+packer_install: true
 
 # Install text chat Slack.
 # Default is true.
