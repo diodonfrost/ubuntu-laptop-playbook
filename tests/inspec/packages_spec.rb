@@ -132,3 +132,12 @@ control 'install-12' do
     it { should be_executable }
   end
 end
+
+control 'install-13' do
+  impact 1.0
+  title 'Java'
+  desc 'Java should be functionnal'
+  describe command('java -version') do
+    its('exit_status') { should eq 0 }
+  end
+end
