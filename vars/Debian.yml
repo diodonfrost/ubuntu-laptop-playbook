@@ -19,6 +19,7 @@ os_packages:
   - vlc
   - wget
   - wireshark
+  - zsh
 
 docker_packages_requirement:
   - apt-transport-https
