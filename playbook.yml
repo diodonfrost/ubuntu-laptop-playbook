@@ -5,15 +5,7 @@
     - defaults/main.yml
 
   roles:
-    - { role: rvm.ruby,
-        tags: ruby,
-        become: yes,
-
-        rvm1_rubies: ['ruby-2.5.1'],
-        rvm1_install_flags: '--auto-dotfiles',     # Remove --user-install from defaults
-        rvm1_install_path: /usr/local/rvm,         # Set to system location
-        rvm1_user: root                            # Need root account to access system location
-      }
+      - diodonfrost.java
       - diodonfrost.puppet_agent
   tasks:
     - include_tasks: tasks/main.yml
