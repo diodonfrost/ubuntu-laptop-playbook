@@ -9,3 +9,4 @@
       - diodonfrost.puppet_agent
   tasks:
     - include_tasks: tasks/main.yml
+      tags: always
