@@ -29,17 +29,20 @@
     src: https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip
     dest: /usr/local/bin
     remote_src: yes
-  when: packer_present.exists == false
+    mode: 0755
+  when: packer_present.stat.exists == False
 
 - name: Download and extract Terraform
   unarchive:
     src: https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
     dest: /usr/local/bin
     remote_src: yes
-  when: terraform_present.exists == false
+    mode: 0755
+  when: terraform_present.stat.exists == False
 
 - name: Download Terragrunt
   get_url:
     url: https://github.com/gruntwork-io/terragrunt/releases/download/v0.18.0/terragrunt_linux_amd64
     dest: /usr/local/bin/terragrunt
-  when: terragrunt_present.exists == false
+    mode: 0755
+  when: terragrunt_present.stat.exists == False
