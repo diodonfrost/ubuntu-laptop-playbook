@@ -21,14 +21,16 @@ The tags available:
 -   discord
 -   docker
 -   gcloud
+-   hashicorp
 -   minikube
 -   openjdk
 -   packer
 -   puppet
 -   slack
 -   spotify
+-   terraform
+-   terragrunt
 -   tusk
--   vagrant
 
 ansible-playbook playbook.yml --tags "atom,docker,tusk"
 
@@ -62,10 +64,6 @@ gcloud_install: true
 # Default is true
 minikube_install: true
 
-# Install Hashicorp Packer
-# Default is true
-packer_install: true
-
 # Install text chat Slack.
 # Default is true.
 spotify_install: true
@@ -78,9 +76,9 @@ slack_install: true
 # Default is true.
 tusk_install: true
 
-# Install provisionner Vagrant.
+# Install Hashicorp packages.
 # Default is true.
-vagrant_install: true
+hashicorp_install: true
 
 # Install shell Oh-My-Zsh.
 # Default is true.

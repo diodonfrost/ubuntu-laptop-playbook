@@ -13,16 +13,6 @@ end
 
 control 'shell-02' do
   impact 1.0
-  title 'oh-my-zsh install'
-  desc 'oh-my-zsh should be present'
-  describe file('/root/.oh-my-zsh') do
-    it { should exist }
-    it { should be_directory }
-  end
-end
-
-control 'shell-03' do
-  impact 1.0
   title 'oh-my-zsh setup'
   desc 'oh-my-zsh should be setup'
   describe file('/root/.zshrc') do

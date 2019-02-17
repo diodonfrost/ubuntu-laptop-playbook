@@ -141,3 +141,23 @@ control 'install-13' do
     its('exit_status') { should eq 0 }
   end
 end
+
+control 'install-14' do
+  impact 1.0
+  title 'Terraform install'
+  desc 'Terraform should be install'
+  describe file('/usr/local/bin/terraform') do
+    it { should exist }
+    it { should be_executable }
+  end
+end
+
+control 'install-15' do
+  impact 1.0
+  title 'Terragrunt install'
+  desc 'Terragrunt should be install'
+  describe file('/usr/local/bin/terragrunt') do
+    it { should exist }
+    it { should be_executable }
+  end
+end

@@ -38,15 +38,15 @@
   when: gcloud_install == true
   tags: gcloud
 
+- name: Install Hashicorp packages
+  import_tasks: setup-hashicorp.yml
+  when: hashicorp_install == true
+  tags: hashicorp
+
 - name: Install Kubernetes Minikube
   import_tasks: setup-minikube.yml
   when: minikube_install == true
   tags: minikube
-
-- name: Install Hashicorp Packer
-  import_tasks: setup-packer.yml
-  when: packer_install == true
-  tags: packer
 
 - name: Install Slack
   import_tasks: setup-slack.yml
@@ -62,8 +62,3 @@
   import_tasks: setup-tusk.yml
   when: tusk_install == true
   tags: tusk
-
-- name: Install Vagrant
-  import_tasks: setup-vagrant.yml
-  when: vagrant_install == true
-  tags: vagrant
