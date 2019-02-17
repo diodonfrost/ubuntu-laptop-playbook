@@ -1,7 +1,0 @@
----
-# Install provisionner Vagrant.
-
-- name: Install Vagrant on Debian family system
-  apt:
-    deb: https://releases.hashicorp.com/vagrant/2.2.1/vagrant_2.2.1_x86_64.deb
-    state: present
