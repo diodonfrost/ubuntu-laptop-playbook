@@ -24,12 +24,10 @@ The tags available:
 -   hashicorp
 -   minikube
 -   openjdk
--   packer
+-   hashicorp
 -   puppet
 -   slack
 -   spotify
--   terraform
--   terragrunt
 -   tusk
 
 ansible-playbook playbook.yml --tags "atom,docker,tusk"
