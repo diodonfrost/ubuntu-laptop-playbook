@@ -54,8 +54,8 @@ atom_packages:
   - highlight-selected
   - intentions
   - language-ansible
-  - language-chef
   - language-docker
+  - language-chef
   - language-groovy
   - language-puppet
   - language-terraform
@@ -63,6 +63,7 @@ atom_packages:
   - linter-ansible-linting
   - linter-docker
   - linter-erb
+  - linter-flake8
   - linter-golinter
   - linter-markdown
   - linter-puppet-lint
@@ -72,3 +73,4 @@ atom_packages:
   - linter-ui-default
   - markdown-preview-plus
   - minimap
+  - Sublime-Style-Column-Selection

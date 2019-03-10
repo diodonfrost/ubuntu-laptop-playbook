@@ -32,3 +32,4 @@ atom_os_packages:
   - puppet-lint
   - pylint
   - shellcheck
+  - python3-flake8
