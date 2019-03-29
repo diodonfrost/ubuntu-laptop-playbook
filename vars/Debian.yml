@@ -5,13 +5,14 @@ os_packages:
   - git
   - golang
   - keepassx
+  - libffi-dev
   - libssl-dev
   - nmap
   - openssh-server
   - openvpn
   - python
   - python-dev
-  - python-pip
+  - python3-pip
   - snapd
   - terminator
   - vim
