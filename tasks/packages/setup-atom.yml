@@ -30,4 +30,5 @@
 - name: Install pip packages for atom linter
   pip:
     name: "{{ atom_pip_packages }}"
+    executable: pip3
     state: present
