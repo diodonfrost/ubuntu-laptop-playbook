@@ -45,6 +45,10 @@ slack_install: true
 # Default is true.
 tusk_install: true
 
+# Install Virtualbox.
+# Default is true.
+virtualbox_install: true
+
 atom_packages:
   - atom-beautify
   - atom-jinja2

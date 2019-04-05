@@ -5,18 +5,16 @@ os_packages:
   - git
   - golang
   - keepassx
-  - libffi-dev
   - libssl-dev
   - nmap
   - openssh-server
   - openvpn
   - python
   - python-dev
-  - python3-pip
+  - python-pip
   - snapd
   - terminator
   - vim
-  - virtualbox
   - vlc
   - wget
   - wireshark
@@ -29,10 +27,8 @@ docker_packages_requirement:
   - software-properties-common
 
 atom_os_packages:
+  - ansible-lint
   - puppet-lint
+  - pylint
   - shellcheck
   - python3-flake8
-  - pylint
-
-atom_pip_packages:
-  - ansible-lint

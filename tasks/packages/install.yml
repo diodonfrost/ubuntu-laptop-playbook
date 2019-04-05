@@ -13,6 +13,13 @@
     state: started
     enabled: yes
 
+- name: Install Virtualbox
+  package:
+    name: virtualbox
+    state: present
+  when: virtualbox_install == true
+  tags: virtualbox
+
 - name: Install text editor Atom
   import_tasks: setup-atom.yml
   when: atom_install == true
