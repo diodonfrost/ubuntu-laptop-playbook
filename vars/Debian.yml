@@ -11,6 +11,7 @@ os_packages:
   - openvpn
   - python
   - python-dev
+  - python3-pip
   - python-pip
   - snapd
   - terminator
