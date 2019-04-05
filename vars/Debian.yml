@@ -27,8 +27,10 @@ docker_packages_requirement:
   - software-properties-common
 
 atom_os_packages:
-  - ansible-lint
   - puppet-lint
   - pylint
   - shellcheck
   - python3-flake8
+
+atom_pip_packages:
+  - ansible-lint
