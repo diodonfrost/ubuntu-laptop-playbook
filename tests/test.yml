@@ -6,3 +6,5 @@
     - diodonfrost.puppet_agent
     - ubuntu-laptop-playbook
     - diodonfrost.java
+    - diodonfrost.packer
+    - diodonfrost.vagrant
