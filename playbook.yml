@@ -5,10 +5,11 @@
     - defaults/main.yml
 
   roles:
-      - diodonfrost.java
-      - diodonfrost.puppet_agent
-      - diodonfrost.vagrant
-      - diodonfrost.packer
+    - diodonfrost.java
+    - diodonfrost.puppet_agent
+    - diodonfrost.packer
+    - diodonfrost.vagrant
+    
   tasks:
     - include_tasks: tasks/main.yml
       tags: always
