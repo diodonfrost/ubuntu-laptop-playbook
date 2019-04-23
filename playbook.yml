@@ -7,6 +7,8 @@
   roles:
       - diodonfrost.java
       - diodonfrost.puppet_agent
+      - diodonfrost.vagrant
+      - diodonfrost.packer
   tasks:
     - include_tasks: tasks/main.yml
       tags: always

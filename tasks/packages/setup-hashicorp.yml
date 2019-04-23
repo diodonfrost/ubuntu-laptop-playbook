@@ -1,12 +1,6 @@
 ---
 # Install Hashicorp packages.
 
-- name: Check if packer is present
-  stat:
-    path: /usr/local/bin/packer
-  changed_when: false
-  register: packer_present
-
 - name: Check if Terraform is present
   stat:
     path: /usr/local/bin/terraform
@@ -18,19 +12,6 @@
     path: /usr/local/bin/terragrunt
   changed_when: false
   register: terragrunt_present
-
-- name: Install Vagrant on Debian family system
-  apt:
-    deb: https://releases.hashicorp.com/vagrant/2.2.1/vagrant_2.2.1_x86_64.deb
-    state: present
-
-- name: Download and extract Packer
-  unarchive:
-    src: https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip
-    dest: /usr/local/bin
-    remote_src: yes
-    mode: 0755
-  when: packer_present.stat.exists == False
 
 - name: Download and extract Terraform
   unarchive:
