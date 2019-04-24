@@ -62,7 +62,7 @@ gcloud_install: true
 # Default is true
 minikube_install: true
 
-# Install text chat Slack.
+# Install Spotify.
 # Default is true.
 spotify_install: true
 
