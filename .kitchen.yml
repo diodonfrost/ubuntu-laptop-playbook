@@ -19,8 +19,8 @@ provisioner:
 platforms:
   - name: "ubuntu-18-04"
     driver:
-      instance_name: "ubuntu-18.04-puppet"
-      image: diodonfrost/ubuntu-18.04-puppet
+      instance_name: "ubuntu-18.04-ansible"
+      image: diodonfrost/ubuntu-18.04-ansible
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
@@ -30,8 +30,8 @@ platforms:
 
   - name: "ubuntu-16-04"
     driver:
-      instance_name: "ubuntu-16.04-puppet"
-      image: diodonfrost/ubuntu-16.04-puppet
+      instance_name: "ubuntu-16.04-ansible"
+      image: diodonfrost/ubuntu-16.04-ansible
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
