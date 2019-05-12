@@ -9,7 +9,8 @@
     - diodonfrost.puppet_agent
     - diodonfrost.packer
     - diodonfrost.vagrant
-    
+    - diodonfrost.terraform
+
   tasks:
     - include_tasks: tasks/main.yml
       tags: always
