@@ -9,4 +9,6 @@
     - diodonfrost.packer
     - diodonfrost.vagrant
     - diodonfrost.terraform
-    - diodonfrost.terragrunt
+    - role: diodonfrost.terragrunt
+      vars:
+        terragrunt_version: v0.18.6
