@@ -9,3 +9,4 @@
     - diodonfrost.packer
     - diodonfrost.vagrant
     - diodonfrost.terraform
+    - diodonfrost.terragrunt
