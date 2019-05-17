@@ -4,3 +4,4 @@
 - name: diodonfrost.vagrant
 - name: diodonfrost.packer
 - name: diodonfrost.terraform
+- name: diodonfrost.terragrunt

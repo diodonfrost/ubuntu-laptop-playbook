@@ -45,11 +45,6 @@
   when: gcloud_install == true
   tags: gcloud
 
-- name: Install Hashicorp packages
-  import_tasks: setup-hashicorp.yml
-  when: hashicorp_install == true
-  tags: hashicorp
-
 - name: Install Kubernetes Minikube
   import_tasks: setup-minikube.yml
   when: minikube_install == true

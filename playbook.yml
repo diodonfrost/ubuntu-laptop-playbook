@@ -10,6 +10,7 @@
     - diodonfrost.packer
     - diodonfrost.vagrant
     - diodonfrost.terraform
+    - diodonfrost.terragrunt
 
   tasks:
     - include_tasks: tasks/main.yml

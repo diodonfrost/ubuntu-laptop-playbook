@@ -21,7 +21,6 @@ The tags available:
 -   discord
 -   docker
 -   gcloud
--   hashicorp
 -   minikube
 -   openjdk
 -   puppet
@@ -73,10 +72,6 @@ slack_install: true
 # Install Tusk note.
 # Default is true.
 tusk_install: true
-
-# Install Hashicorp packages.
-# Default is true.
-hashicorp_install: true
 
 # Install shell Oh-My-Zsh.
 # Default is true.
