@@ -95,16 +95,6 @@ end
 
 control 'install-09' do
   impact 1.0
-  title 'Slack install'
-  desc 'Slack should be install'
-  describe file('/snap/bin/slack') do
-    it { should exist }
-    it { should be_executable }
-  end
-end
-
-control 'install-10' do
-  impact 1.0
   title 'Spotify install'
   desc 'Spotify should be install'
   describe file('/snap/bin/spotify') do
@@ -113,7 +103,7 @@ control 'install-10' do
   end
 end
 
-control 'install-11' do
+control 'install-10' do
   impact 1.0
   title 'Tusk install'
   desc 'Tusk should be install'
@@ -123,7 +113,7 @@ control 'install-11' do
   end
 end
 
-control 'install-12' do
+control 'install-11' do
   impact 1.0
   title 'Packer install'
   desc 'Packer should be install'
@@ -133,7 +123,7 @@ control 'install-12' do
   end
 end
 
-control 'install-13' do
+control 'install-12' do
   impact 1.0
   title 'Java'
   desc 'Java should be functionnal'
@@ -142,7 +132,7 @@ control 'install-13' do
   end
 end
 
-control 'install-14' do
+control 'install-13' do
   impact 1.0
   title 'Terraform install'
   desc 'Terraform should be install'
@@ -152,7 +142,7 @@ control 'install-14' do
   end
 end
 
-control 'install-15' do
+control 'install-14' do
   impact 1.0
   title 'Terragrunt install'
   desc 'Terragrunt should be install'

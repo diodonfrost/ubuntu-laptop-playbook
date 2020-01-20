@@ -33,10 +33,6 @@ ohmyzsh_install: true
 # Default is true.
 spotify_install: true
 
-# Install text chat Slack.
-# Default is true.
-slack_install: true
-
 # Install Tusk note.
 # Default is true.
 tusk_install: true
