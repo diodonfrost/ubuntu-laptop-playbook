@@ -2,6 +2,6 @@
 # Install note-taking Tusk.
 
 - name: Install Tusk with package manager snap
-  shell: snap install tusk
-  args:
-    creates: /snap/bin/tusk
+  snap:
+    name: tusk
+    state: present

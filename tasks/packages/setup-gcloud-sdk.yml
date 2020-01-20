@@ -21,6 +21,7 @@
     - kubectl
 
 - name: Install Helm with package manager snap
-  shell: snap install helm --classic
-  args:
-    creates: /snap/bin/helm
+  snap:
+    name: helm
+    classic: yes
+    state: present

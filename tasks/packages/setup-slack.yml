@@ -2,6 +2,7 @@
 # Install  text chat Slack.
 
 - name: Install Slack with package manager snap
-  shell: snap install slack --classic
-  args:
-    creates: /snap/bin/slack
+  snap:
+    name: slack
+    classic: yes
+    state: present

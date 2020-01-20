@@ -2,6 +2,6 @@
 # Install voice and text chat Discord.
 
 - name: Install Discord with package manager snap
-  shell: snap install discord
-  args:
-    creates: /snap/bin/discord
+  snap:
+    name: discord
+    state: present

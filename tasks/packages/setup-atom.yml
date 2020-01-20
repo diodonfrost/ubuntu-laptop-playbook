@@ -7,9 +7,10 @@
   changed_when: false
 
 - name: Install text editor Atom with package manager snap
-  shell: snap install atom --classic
-  args:
-    creates: /snap/bin/atom
+  snap:
+    name: atom
+    classic: yes
+    state: present
 
 - name: Install Atom module with Atom Package Manager
   shell: "/snap/bin/apm install {{ item[0] }}"

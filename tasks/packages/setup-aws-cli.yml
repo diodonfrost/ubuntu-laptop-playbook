@@ -2,6 +2,7 @@
 # Install aws cli
 
 - name: Install aws-cli with package manager snap
-  shell: snap install aws-cli --classic
-  args:
-    creates: /snap/bin/aws-cli.aws
+  snap:
+    name: aws-cli
+    classic: yes
+    state: present
