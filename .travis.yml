@@ -1,26 +1,22 @@
 ---
 dist: xenial
-language: python
-python:
-  - "3.7"
+
+before_install:
+  - 'sudo rm -if /home/vagrant'
+  - 'sudo apt-get update'
 
 install:
-  - 'python -m pip install ansible==2.9.3'
-  - 'env ANSIBLE_FORCE_COLOR=1 ansible-galaxy install -r requirements.yml'
+  - 'gem install inspec-bin'
+  - 'sudo apt-get install -y python python-pip'
+  - 'sudo python -m pip install ansible==2.9.3'
+  - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-galaxy install -r requirements.yml'
 
 script:
   # Check syntax
-  - 'env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml --syntax-check'
+  - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml --syntax-check'
 
   # Run ansible playbook
-  - 'env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml'
-
-  # Test indempotence
-  - >
-    env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+  - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml'
 
   # Test playbook
   - 'inspec exec tests/inspec --chef-license accept-silent'
