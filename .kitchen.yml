@@ -1,11 +1,10 @@
----
-driver:
-  name: docker
-  privileged: true
-  volume:
-    - /sys/fs/cgroup:/sys/fs/cgroup
-    - /dev/fuse:/dev/fuse
 
+---
+# we use docker as plateform
+driver:
+  name: vagrant
+
+# Ansible will be our provisioner
 provisioner:
   name: ansible_playbook
   hosts: localhost
@@ -16,34 +15,16 @@ provisioner:
   require_ansible_omnibus: false
   idempotency_test: true
 
-platforms:
-  - name: "ubuntu-18-04"
-    driver:
-      instance_name: "ubuntu-18.04-ansible"
-      image: diodonfrost/ubuntu-18.04-ansible
-      run_command: /sbin/init
-      platform: ubuntu
-      provision_command:
-        - apt-get install -y init
-        - apt-get install -y fuse snapd snap-confine squashfuse sudo
-        - dpkg-divert --local --rename --add /sbin/udevadm && ln -s /bin/true /sbin/udevadm
-
-  - name: "ubuntu-16-04"
-    driver:
-      instance_name: "ubuntu-16.04-ansible"
-      image: diodonfrost/ubuntu-16.04-ansible
-      run_command: /sbin/init
-      platform: ubuntu
-      provision_command:
-        - apt-get install -y init
-        - apt-get install -y fuse snapd snap-confine squashfuse sudo
-        - dpkg-divert --local --rename --add /sbin/udevadm && ln -s /bin/true /sbin/udevadm
-
 # We use Inspec as testing framework
 verifier:
   name: inspec
   inspec_tests:
-    - path: spec/inspec
+    - path: tests/inspec
 
+# Build platforms
+platforms:
+  - name: ubuntu-18.04
+
+# Define playbook
 suites:
   - name: default

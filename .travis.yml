@@ -6,7 +6,6 @@ before_install:
   - 'sudo apt-get update'
 
 install:
-  - 'gem install inspec-bin'
   - 'sudo apt-get install -y python python-pip'
   - 'sudo python -m pip install ansible==2.9.3'
   - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-galaxy install -r requirements.yml'
