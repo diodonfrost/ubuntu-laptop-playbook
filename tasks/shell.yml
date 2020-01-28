@@ -13,9 +13,7 @@
     update: no
   become: yes
   become_user: "{{ item }}"
-  with_items:
-    - "{{ list_user.stdout_lines }}"
-    - "root"
+  with_items: "{{ list_user.stdout_lines | list + ['root'] }}"
 
 - name: Creating new ~/.zshrc
   copy:
@@ -23,14 +21,10 @@
     dest: ~/.zshrc
   become: yes
   become_user: "{{ item }}"
-  with_items:
-    - "{{ list_user.stdout_lines }}"
-    - "root"
+  with_items: "{{ list_user.stdout_lines | list + ['root'] }}"
 
 - name: Change user shell
   user:
     name: "{{ item }}"
     shell: /bin/zsh
-  with_items:
-    - "{{ list_user.stdout_lines }}"
-    - "root"
+  with_items: "{{ list_user.stdout_lines | list + ['root'] }}"

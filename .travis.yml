@@ -1,12 +1,15 @@
 ---
 dist: xenial
+language: python
+python:
+  - "3.7"
 
 before_install:
   - 'sudo rm -if /home/vagrant'
   - 'sudo apt-get update'
 
 install:
-  - 'sudo apt-get install -y python python-pip'
+  - 'wget https://packages.chef.io/files/stable/inspec/4.18.51/ubuntu/18.04/inspec_4.18.51-1_amd64.deb && sudo dpkg -i inspec_4.18.51-1_amd64.deb'
   - 'sudo python -m pip install ansible==2.9.3'
   - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-galaxy install -r requirements.yml'
 
@@ -18,4 +21,4 @@ script:
   - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml'
 
   # Test playbook
-  - 'inspec exec tests/inspec --chef-license accept-silent'
+  - 'sudo inspec exec tests/inspec --chef-license accept-silent'
