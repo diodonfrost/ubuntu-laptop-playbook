@@ -10,13 +10,3 @@ control 'shell-01' do
     it { should be_installed }
   end
 end
-
-control 'shell-02' do
-  impact 1.0
-  title 'oh-my-zsh setup'
-  desc 'oh-my-zsh should be setup'
-  describe file('/root/.zshrc') do
-    it { should exist }
-    its('content') { should include 'export ZSH=$HOME/.oh-my-zsh' }
-  end
-end
