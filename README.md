@@ -37,6 +37,11 @@ ansible-playbook playbook.yml --tags "atom,docker,tusk"
 ---
 # defaults file for linux-dev-playbook
 
+# Target users to install
+# Define target users where to installs and configures software
+# Default: all Linux users
+user_list: []
+
 # Install text editor Atom.
 # Default is true.
 atom_install: true
@@ -61,21 +66,21 @@ gcloud_install: true
 # Default is true
 minikube_install: true
 
+# Install shell Oh-My-Zsh.
+# Default is true.
+ohmyzsh_install: true
+
 # Install Spotify.
 # Default is true.
 spotify_install: true
-
-# Install text chat Slack.
-# Default is true.
-slack_install: true
 
 # Install Tusk note.
 # Default is true.
 tusk_install: true
 
-# Install shell Oh-My-Zsh.
+# Install Virtualbox.
 # Default is true.
-ohmyzsh_install: true
+virtualbox_install: true
 
 atom_packages:
   - atom-beautify
@@ -86,8 +91,8 @@ atom_packages:
   - highlight-selected
   - intentions
   - language-ansible
-  - language-chef
   - language-docker
+  - language-chef
   - language-groovy
   - language-puppet
   - language-terraform
@@ -95,6 +100,7 @@ atom_packages:
   - linter-ansible-linting
   - linter-docker
   - linter-erb
+  - linter-flake8
   - linter-golinter
   - linter-markdown
   - linter-puppet-lint
@@ -104,6 +110,7 @@ atom_packages:
   - linter-ui-default
   - markdown-preview-plus
   - minimap
+  - Sublime-Style-Column-Selection
 ```
 
 ## Dependencies
@@ -111,39 +118,23 @@ atom_packages:
 None
 
 ## Local Testing
-The preferred way of locally testing the role is to use Docker. You will have to install Docker on your system. See Get started for a Docker package suitable to for your system.
-
-You can also use vagrant and Virtualbox to run tests locally. You will have to install Virtualbox and Vagrant on your system. See Vagrant Downloads for a vagrant package suitable for your system. For all our tests we use test-kitchen. If you are not familiar with test-kitchen please have a look at their guide.
+The preferred way of locally testing the role is to use Virtualbox. You will have to install Virtualbox and Vagrant on your system. See Vagrant Downloads for a vagrant package suitable for your system. For all our tests we use test-kitchen. If you are not familiar with test-kitchen please have a look at their guide.
 
 Next install test-kitchen:
 ```shell
 # Install dependencies
 gem install bundler
 bundle install
-```
-
-### Testing with Docker
-```shell
-# fast test on one machine
-kitchen test default-ubuntu-18-04
-
-# Build environment and apply puppet manifest
-kitchen converge default-ubuntu-18-04
-
-# Launch inspec tests
-kitchen verify default-ubuntu-18-04
-```
 
 ### Testing with Virtualbox
 ```shell
-# Test with virtualbox
-export KITCHEN_YAML=".kitchen-vagrant.yml"
+
 kitchen test default-ubuntu-18-04
 
-# Build environment and apply puppet manifest
+# Build environment and apply ansible playbook
 kitchen converge default-ubuntu-18-04
 
-# Launch inspec tests
+# Run inspec tests
 kitchen verify default-ubuntu-18-04
 ```
 
