@@ -1,6 +1,17 @@
 ---
 # Install selected packages
 
+- name : List user with home directory
+  shell: ls -1 /home
+  register: linux_users
+  changed_when: false
+  when: user_list == []
+
+- name: Set linux_users to list
+  set_fact:
+    user_list: "{{ linux_users.stdout_lines | list + ['root'] }}"
+  when: user_list == []
+
 - name: Install os packages
   package:
     name: "{{ item }}"

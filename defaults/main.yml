@@ -1,6 +1,11 @@
 ---
 # defaults file for linux-dev-playbook
 
+# Target users to install
+# Define target users where to installs and configures software
+# Default: all Linux users
+user_list: []
+
 # Install text editor Atom.
 # Default is true.
 atom_install: true

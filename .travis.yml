@@ -18,7 +18,7 @@ script:
   - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml --syntax-check'
 
   # Run ansible playbook
-  - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml'
+  - 'sudo env ANSIBLE_FORCE_COLOR=1 ansible-playbook playbook.yml -e "user_list=travis"'
 
   # Test playbook
   - 'sudo inspec exec tests/inspec --chef-license accept-silent'
