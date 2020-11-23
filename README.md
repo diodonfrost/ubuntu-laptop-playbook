@@ -1,7 +1,5 @@
 # Ubuntu laptop playbook
 
-[![Build Status](https://travis-ci.com/diodonfrost/ubuntu-laptop-playbook.svg?branch=master)](https://travis-ci.com/diodonfrost/ubuntu-laptop-playbook)
-
 This playbook installs and configures most of the software I use on my Ubuntu laptop for Cloud and software development.
 
 ## Installation
