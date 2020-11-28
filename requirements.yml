@@ -1,5 +1,4 @@
 ---
-- name: diodonfrost.puppet_agent
 - name: diodonfrost.java
 - name: diodonfrost.vagrant
 - name: diodonfrost.packer

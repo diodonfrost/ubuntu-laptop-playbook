@@ -6,7 +6,6 @@
 
   roles:
     - diodonfrost.java
-    - diodonfrost.puppet_agent
     - diodonfrost.packer
     - diodonfrost.vagrant
     - diodonfrost.terraform
