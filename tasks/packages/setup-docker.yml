@@ -8,7 +8,7 @@
 
 - name: Add an Docker signing key on Debian
   apt_key:
-    url: https://download.docker.com/linux/{{ ansible_distribution | lower}}/gpg
+    url: https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg
     state: present
 
 - name: Add Docker repository on Debian

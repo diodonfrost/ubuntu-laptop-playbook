@@ -1,7 +1,7 @@
 ---
 # Install selected packages
 
-- name : List user with home directory
+- name: List user with home directory
   shell: ls -1 /home
   register: linux_users
   changed_when: false
@@ -28,45 +28,45 @@
   package:
     name: virtualbox
     state: present
-  when: virtualbox_install == true
+  when: virtualbox_install
   tags: virtualbox
 
 - name: Install text editor Atom
   import_tasks: setup-atom.yml
-  when: atom_install == true
+  when: atom_install
   tags: atom
 
 - name: Install awscli
   import_tasks: setup-aws-cli.yml
-  when: awscli_install == true
+  when: awscli_install
   tags: awscli
 
 - name: Install voice and text chat Discord
   import_tasks: setup-discord.yml
-  when: discord_install == true
+  when: discord_install
   tags: discord
 
 - name: Install Docker
   import_tasks: setup-docker.yml
-  when: docker_install == true
+  when: docker_install
   tags: docker
 
 - name: Install google cloud sdk
   import_tasks: setup-gcloud-sdk.yml
-  when: gcloud_install == true
+  when: gcloud_install
   tags: gcloud
 
 - name: Install Kubernetes Minikube
   import_tasks: setup-minikube.yml
-  when: minikube_install == true
+  when: minikube_install
   tags: minikube
 
 - name: Install Spotify
   import_tasks: setup-spotify.yml
-  when: spotify_install == true
+  when: spotify_install
   tags: spotify
 
 - name: Install Tusk
   import_tasks: setup-tusk.yml
-  when: tusk_install == true
+  when: tusk_install
   tags: tusk
