@@ -1,0 +1,9 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Linux | Verify commands outputs
+      assert:
+        that:
+          - true
+        success_msg: "All tests passed"

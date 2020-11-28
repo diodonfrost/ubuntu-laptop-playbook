@@ -1,0 +1,3 @@
+---
+- name: "Import ubuntu-laptop-playbook"
+  import_playbook: "../../playbook.yml"

@@ -116,24 +116,32 @@ atom_packages:
 None
 
 ## Local Testing
-The preferred way of locally testing the role is to use Virtualbox. You will have to install Virtualbox and Vagrant on your system. See Vagrant Downloads for a vagrant package suitable for your system. For all our tests we use test-kitchen. If you are not familiar with test-kitchen please have a look at their guide.
 
-Next install test-kitchen:
+This project uses [Molecule](http://molecule.readthedocs.io/) to aid in the
+development and testing.
+
+To develop or test you'll need to have installed the following:
+
+* Linux (e.g. [Ubuntu](http://www.ubuntu.com/))
+* [Docker](https://www.docker.com/)
+* [Python](https://www.python.org/) (including python-pip)
+* [Ansible](https://www.ansible.com/)
+* [Molecule](http://molecule.readthedocs.io/)
+
+### Testing with Docker
+
 ```shell
-# Install dependencies
-gem install bundler
-bundle install
+# Test Ansible playbook
+molecule test
 
-### Testing with Virtualbox
-```shell
+# Create ubuntu:20.04 instance
+molecule create
 
-kitchen test default-ubuntu-18-04
+# Apply Ansible playbook
+molecule converge
 
-# Build environment and apply ansible playbook
-kitchen converge default-ubuntu-18-04
-
-# Run inspec tests
-kitchen verify default-ubuntu-18-04
+# Launch Ansible tests
+molecule verify
 ```
 
 ## License
