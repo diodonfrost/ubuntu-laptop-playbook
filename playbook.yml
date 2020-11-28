@@ -11,6 +11,7 @@
     - diodonfrost.vagrant
     - diodonfrost.terraform
     - diodonfrost.terragrunt
+    - diodonfrost.ohmyzsh
 
   tasks:
     - include_tasks: tasks/main.yml

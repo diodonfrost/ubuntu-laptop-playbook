@@ -8,8 +8,3 @@
 - name: Ensure selected packages are present
   include_tasks: "packages/install.yml"
   tags: always
-
-- name: Setup shell
-  include_tasks: "shell.yml"
-  when: ohmyzsh_install == true
-  tags: ohmyzsh

@@ -5,3 +5,4 @@
 - name: diodonfrost.packer
 - name: diodonfrost.terraform
 - name: diodonfrost.terragrunt
+- name: diodonfrost.ohmyzsh
