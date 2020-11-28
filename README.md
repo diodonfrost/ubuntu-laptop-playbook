@@ -1,5 +1,7 @@
 # Ubuntu laptop playbook
 
+[![molecule](https://github.com/diodonfrost/ubuntu-laptop-playbook/workflows/molecule/badge.svg)](https://github.com/diodonfrost/ubuntu-laptop-playbook/actions)
+
 This playbook installs and configures most of the software I use on my Ubuntu laptop for Cloud and software development.
 
 ## Installation
