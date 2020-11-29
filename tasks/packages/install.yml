@@ -60,8 +60,3 @@
   import_tasks: setup-spotify.yml
   when: spotify_install
   tags: spotify
-
-- name: Install Tusk
-  import_tasks: setup-tusk.yml
-  when: tusk_install
-  tags: tusk

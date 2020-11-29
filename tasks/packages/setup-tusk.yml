@@ -1,7 +1,0 @@
----
-# Install note-taking Tusk.
-
-- name: Install Tusk with package manager snap
-  snap:
-    name: tusk
-    state: present

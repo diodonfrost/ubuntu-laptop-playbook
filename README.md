@@ -24,7 +24,6 @@ The tags available:
 -   openjdk
 -   slack
 -   spotify
--   tusk
 -   virtualbox
 
 ansible-playbook playbook.yml --tags "atom,docker,tusk"
@@ -67,10 +66,6 @@ ohmyzsh_install: true
 # Install Spotify.
 # Default is true.
 spotify_install: true
-
-# Install Tusk note.
-# Default is true.
-tusk_install: true
 
 # Install Virtualbox.
 # Default is true.
