@@ -20,7 +20,6 @@ The tags available:
 -   aws-cli
 -   discord
 -   docker
--   gcloud
 -   minikube
 -   openjdk
 -   slack
@@ -56,10 +55,6 @@ discord_install: true
 # Install Docker.
 # Default is true.
 docker_install: true
-
-# Install google sdk for cloud provider
-# Default is true
-gcloud_install: true
 
 # Install Minikube for deploy local kubernetes cluster
 # Default is true

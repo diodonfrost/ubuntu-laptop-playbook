@@ -22,10 +22,6 @@ discord_install: true
 # Default is true.
 docker_install: true
 
-# Install google sdk for cloud provider
-# Default is true
-gcloud_install: true
-
 # Install Minikube for deploy local kubernetes cluster
 # Default is true
 minikube_install: true

@@ -51,11 +51,6 @@
   when: docker_install
   tags: docker
 
-- name: Install google cloud sdk
-  import_tasks: setup-gcloud-sdk.yml
-  when: gcloud_install
-  tags: gcloud
-
 - name: Install Kubernetes Minikube
   import_tasks: setup-minikube.yml
   when: minikube_install
