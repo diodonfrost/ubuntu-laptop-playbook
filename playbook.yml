@@ -1,5 +1,5 @@
 ---
-- hosts: all 
+- hosts: all
   remote_user: root
   vars_files:
     - defaults/main.yml
