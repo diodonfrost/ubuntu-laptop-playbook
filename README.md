@@ -16,15 +16,16 @@ This playbook installs and configures most of the software I use on my Ubuntu la
 You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook --tags` flag.
 The tags available:
 
--   atom
--   aws-cli
--   discord
--   docker
--   minikube
--   openjdk
--   slack
--   spotify
--   virtualbox
+- atom
+- aws-cli
+- discord
+- docker
+- jetbrains-toolbox
+- minikube
+- openjdk
+- slack
+- spotify
+- virtualbox
 
 ansible-playbook playbook.yml --tags "atom,docker,tusk"
 
