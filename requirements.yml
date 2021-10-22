@@ -5,3 +5,4 @@
 - name: diodonfrost.terraform
 - name: diodonfrost.terragrunt
 - name: diodonfrost.ohmyzsh
+- name: diodonfrost.jetbrains_toolbox

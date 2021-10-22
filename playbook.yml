@@ -11,6 +11,7 @@
     - diodonfrost.terraform
     - diodonfrost.terragrunt
     - diodonfrost.ohmyzsh
+    - diodonfrost.jetbrains_toolbox
 
   tasks:
     - include_tasks: tasks/main.yml
