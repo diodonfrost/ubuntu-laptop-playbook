@@ -6,10 +6,6 @@
 # Default: all Linux users
 user_list: []
 
-# Install text editor Atom.
-# Default is true.
-atom_install: true
-
 # Install awscli.
 # Default is true.
 awscli_install: true
@@ -37,33 +33,3 @@ spotify_install: true
 # Install Virtualbox.
 # Default is true.
 virtualbox_install: true
-
-atom_packages:
-  - atom-beautify
-  - atom-jinja2
-  - atom-material-ui
-  - busy-signal
-  - git-plus
-  - highlight-selected
-  - intentions
-  - language-ansible
-  - language-docker
-  - language-chef
-  - language-groovy
-  - language-puppet
-  - language-terraform
-  - linter
-  - linter-ansible-linting
-  - linter-docker
-  - linter-erb
-  - linter-flake8
-  - linter-golinter
-  - linter-markdown
-  - linter-puppet-lint
-  - linter-pylint
-  - linter-ruby
-  - linter-shellcheck
-  - linter-ui-default
-  - markdown-preview-plus
-  - minimap
-  - Sublime-Style-Column-Selection

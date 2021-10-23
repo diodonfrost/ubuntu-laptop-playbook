@@ -31,11 +31,6 @@
   when: virtualbox_install
   tags: virtualbox
 
-- name: Install text editor Atom
-  import_tasks: setup-atom.yml
-  when: atom_install
-  tags: atom
-
 - name: Install awscli
   import_tasks: setup-aws-cli.yml
   when: awscli_install

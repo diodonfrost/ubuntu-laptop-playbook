@@ -16,7 +16,6 @@ This playbook installs and configures most of the software I use on my Ubuntu la
 You can filter which part of the provisioning process to run by specifying a set of tags using `ansible-playbook --tags` flag.
 The tags available:
 
-- atom
 - aws-cli
 - discord
 - docker
@@ -26,8 +25,6 @@ The tags available:
 - slack
 - spotify
 - virtualbox
-
-ansible-playbook playbook.yml --tags "atom,docker,tusk"
 
 ## Overriding Defaults
 
@@ -39,10 +36,6 @@ ansible-playbook playbook.yml --tags "atom,docker,tusk"
 # Define target users where to installs and configures software
 # Default: all Linux users
 user_list: []
-
-# Install text editor Atom.
-# Default is true.
-atom_install: true
 
 # Install awscli.
 # Default is true.
@@ -71,36 +64,6 @@ spotify_install: true
 # Install Virtualbox.
 # Default is true.
 virtualbox_install: true
-
-atom_packages:
-  - atom-beautify
-  - atom-jinja2
-  - atom-material-ui
-  - busy-signal
-  - git-plus
-  - highlight-selected
-  - intentions
-  - language-ansible
-  - language-docker
-  - language-chef
-  - language-groovy
-  - language-puppet
-  - language-terraform
-  - linter
-  - linter-ansible-linting
-  - linter-docker
-  - linter-erb
-  - linter-flake8
-  - linter-golinter
-  - linter-markdown
-  - linter-puppet-lint
-  - linter-pylint
-  - linter-ruby
-  - linter-shellcheck
-  - linter-ui-default
-  - markdown-preview-plus
-  - minimap
-  - Sublime-Style-Column-Selection
 ```
 
 ## Dependencies
